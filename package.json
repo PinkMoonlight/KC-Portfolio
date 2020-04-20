@@ -1,0 +1,25 @@
+{
+  "name": "katecherie-portfolio",
+  "version": "1.0.0",
+  "description": "portfolio site",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PinkMoonlight/KC-Portfolio.git"
+  },
+  "author": "Kate Fisher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PinkMoonlight/KC-Portfolio/issues"
+  },
+  "homepage": "https://github.com/PinkMoonlight/KC-Portfolio#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
