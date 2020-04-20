@@ -98,7 +98,16 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-  
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+
+  body {
+    padding: 3rem;
+    box-sizing: border-box;
+  }
 
    
 /* ==========================================================================
