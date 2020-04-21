@@ -1,0 +1,38 @@
+      /*COLOURS */
+    $color-primary-light: #f3735c;
+    $color-primary: #f15946;
+    $color-primary-dark: #cf4838;
+
+    $color-contrast: #2b8c8c;
+    $color-neutral: #F8FFE5;
+    $color-dark-theme: #1f202b;
+    
+  
+    *, 
+    *::before, 
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: inherit;
+    }
+    html {
+        font-size: 62.5%; // 10px/16px = 62.5% 1rem = 10px;    
+    }
+  
+    body {
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.7;
+      color: #777;
+      box-sizing: border-box;
+    }
+
+    .container {
+      display: grid;
+      grid-template-rows: 100vh 100vh repeat(3, min-content);
+      grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+
+      & > * {
+          padding: 40px;
+          font-size: 3rem;
+      }
+    }

@@ -1,28 +1,8 @@
-  
-    /* COLOURS
-    $color-primary-light: ?
-    $color-primary: ?
-    $color-primary-dark: ?
-    */
+  @import "base";
+  @import "typography";
 
-    
-  
-    *, 
-    *::before, 
-    *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: inherit;
-    }
-    html {
-        font-size: 62.5%;
-    }
-  
-    body {
-      padding: 3rem;
-      line-height: 1.7;
-      color: #777;
-
-      box-sizing: border-box;
-    }
-  
+  @import "about";
+  @import "contact";
+  @import "footer";
+  @import "header";
+  @import "portfolio";
