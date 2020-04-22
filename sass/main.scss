@@ -1,8 +1,14 @@
-  @import "base";
-  @import "typography";
+  @import "base/base";
+  @import "base/typography";
 
-  @import "about";
-  @import "contact";
-  @import "footer";
-  @import "header";
-  @import "portfolio";
+  @import "components/button";
+
+  
+ 
+  @import "layout/footer";
+  @import "layout/header";
+  
+
+  @import "pages/home/about";
+  @import "pages/home/contact";
+  @import "pages/home/portfolio";

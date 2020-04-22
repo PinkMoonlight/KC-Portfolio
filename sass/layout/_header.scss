@@ -1,0 +1,42 @@
+.header {
+    display: block;
+    background-image: linear-gradient(to right bottom, rgba(243,115,92,0.3), rgba(207,72,56,0.8)),url(../img/hero.jpeg);
+    background-size: cover;
+    background-color: $color-primary-light; 
+    color: $color-neutral;
+    grid-column: full-start / full-end;
+    grid-row: 1 / 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    &__navigation {
+        font-size: 3rem;
+        margin: 2rem 5rem;
+
+        &--list {
+            list-style-type: none;
+            display: flex;
+        }
+
+        &--item {
+            padding-left: 3rem;
+        }   
+
+        &--link {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+
+    &__text-box {
+        margin: 5rem;
+        justify-self: flex-end;
+    }
+
+}
+.heading-primary--sub {
+    text-align: right;
+}

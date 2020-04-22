@@ -22,24 +22,31 @@
   <header class="header">
       <!-- <img src="/img/kc-icon.png" class="header__navigation--logo" /> -->
     <nav class="header__navigation">
-      <ul class="navigation__list">
-        <li class="navigation__item">About</li>
-        <li class="navigation__item">Portfolio</li>
-        <li class="navigation__item">Contact</li>
+      <ul class="header__navigation--list">
+        <li class="header__navigation--item"><a href="#about" class="header__navigation--link">About</a></li>
+        <li class="header__navigation--item"><a href="#portfolio" class="header__navigation--link">Portfolio</a></li>
+        <li class="header__navigation--item"><a href="#contact" class="header__navigation--link">Contact</a></li>
       </ul>
     </nav>
     <div class="header__text-box">
-      <h1 class="heading-primary--main heading-1 ">Kate Cherie | Portfolio</h1>
+      <h1 class="heading-primary--main heading-1 mb-sm">Kate Cherie</h1>
       <h3 class="heading-primary--sub heading-3 ">Web Developer</h3>
     </div>
   </header>
-  <section class="about">
-    About Section
+  <section class="about" id="about">
+    <img src="/img/about-img.jpg" alt="Women sitting at a desk facing a large window" class="about__img-1">
+    <div class="about__content">
+      <h4 class="about__content--heading heading-4 mb-md">About Me</h4>
+      <p class="about__content--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Earum nihil obcaecati iusto, nostrum soluta possimus. Recusandae itaque, officia doloremque, 
+        qui nesciunt numquam adipisci fugit ipsam ducimus placeat culpa! Nesciunt, nostrum?</p>
+        <button class="btn btn--about">Click to know more</button>
+    </div>
   </section>
-  <section class="portfolio">
+  <section class="portfolio" id="portfolio">
     Portfolio Section
   </section>
-  <section class="contact">
+  <section class="contact" id="contact">
     Contact Section
   </section>
   <footer class="footer">
