@@ -1,5 +1,101 @@
 .portfolio {
-    background-color: $color-primary;
+    background-color: $color-dark-theme; 
+    /* $color-darker-alt
+         $color-dark-alt;*/
     grid-column: center-start / center-end;
     grid-row: 3 / 4;
+    margin: 15rem 0;
+    z-index: 1;
+
+
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 8rem;
+    
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__img {
+        background-size: cover;
+        background-position: center;
+
+        height: 18rem;
+        width: 28rem;
+        position: relative;
+    }
+
+    &__img::before,
+    &__img::after {
+        content: "";
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        transition: all;
+    }
+    &__img::before {
+        border: 3px solid #f3735c;
+        top: -12px;
+        left: -12px;
+        z-index: -1;
+    }
+
+    &__img::after {
+        border: 3px solid $color-neutral;
+        top: 12px;
+        left: 12px;
+        z-index: 3;
+    }
+
+    &__img--1 {
+        background-image: url(../../img/nexter-site.png);
+    }
+    &__img--2 {
+        background-image: url(../../img/natours-site.png);
+    } 
+    &__img--3 {
+         background-image: url(../../img/magic8ball-game.png);
+    } 
+    &__img--4 {
+        background-image: url(../../img/budget-webapp.png);
+    }   
+    &__img--5 {
+        background-image: url(../../img/trillo-site.png);
+    } 
+    &__img--6 {
+        background-image: url(../../img/budget-webapp.png);
+     /*        background-image: linear-gradient(to right bottom, rgba(243,115,92,0.3), rgba(207,72,56,0.8)), url(../../img/budget-webapp.png);
+*/
+    } 
+
+    &__text {
+        background-color: $color-dark-theme;
+        color: $color-neutral;
+        padding: 2rem 0;
+
+        display: flex;
+        flex-direction: column;
+        //align-items: center;
+        text-align: center;
+    }
+
+    &__box--heading {
+        background-color: inherit;
+        color:  $color-primary-light;
+        padding: 2rem;
+        display: inline-block;
+        //text-align: center;
+    
+    }
+
+    &__description {
+        padding: 0 3rem;
+        font-size: 1.5rem;
+    }
 }
+
