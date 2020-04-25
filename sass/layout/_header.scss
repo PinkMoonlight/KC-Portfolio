@@ -23,6 +23,7 @@
 
         &--item {
             padding-left: 3rem;
+            font-family: $font-headings;
         }   
 
         &--link:link,
@@ -31,9 +32,9 @@
             color: inherit;
         }
 
-        &--link:hover {
+        &--link:hover,
+        &--link:focus {
             color: $color-primary-dark;
-            font-weight: 700;
         }
     }
 

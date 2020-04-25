@@ -5,9 +5,14 @@
 
     $color-contrast: #2b8c8c;
     $color-neutral: #F8FFE5;
-    $color-dark-theme: rgb(31, 32, 43);
+    $color-dark-theme: #1f202b;
     $color-dark-alt: #283845;
     $color-darker-alt: #202C39;
+
+    /* FONTS */
+    $font-title: 'Roboto Slab', serif;
+    $font-headings: 'Ubuntu', sans-serif;
+    $font-main: 'Montserrat', sans-serif;
     
   
     *, 
@@ -22,7 +27,7 @@
     }
   
     body {
-      font-family: 'Open Sans', sans-serif;
+      font-family: $font-main;
       line-height: 1.7;
       color: #202C39;
       box-sizing: border-box;

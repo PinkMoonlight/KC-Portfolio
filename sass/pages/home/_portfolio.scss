@@ -65,16 +65,14 @@
         background-image: url(../../img/budget-webapp.png);
     }   
     &__img--5 {
-        background-image: url(../../img/trillo-site.png);
+        background-image: url(../../img/sticky-notes-webapp.png);
     } 
     &__img--6 {
-        background-image: url(../../img/budget-webapp.png);
-     /*        background-image: linear-gradient(to right bottom, rgba(243,115,92,0.3), rgba(207,72,56,0.8)), url(../../img/budget-webapp.png);
-*/
+        background-image: url(../../img/name-tag-webapp.png);
     } 
 
     &__text {
-        background-color: $color-dark-theme;
+        background-color: inherit;
         color: $color-neutral;
         padding: 2rem 0;
 

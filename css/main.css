@@ -1,4 +1,5 @@
 /*COLOURS */
+/* FONTS */
 *,
 *::before,
 *::after {
@@ -10,7 +11,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.7;
   color: #202C39;
   box-sizing: border-box;
@@ -22,7 +23,7 @@ body {
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
 .heading-1, .heading-2 {
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   font-weight: 400; }
 
 .heading-1 {
@@ -35,14 +36,21 @@ body {
   color: #F8FFE5; }
 
 .heading-3 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
   font-size: 3.5rem;
   color: #F8FFE5;
   line-height: 1; }
 
 .heading-4 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
   font-size: 2.5rem;
   color: #f3735c;
   line-height: 1; }
+
+.mb-mini {
+  margin-bottom: 1rem; }
 
 .mb-sm {
   margin-bottom: 2rem; }
@@ -58,13 +66,13 @@ body {
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   border-radius: 1rem;
   padding: 1.1rem 2rem;
   border: none;
   transition: all .2s;
   cursor: pointer;
-  font-family: 'Open Sans', sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 .btn:hover {
   transform: translateY(-3px);
@@ -76,9 +84,15 @@ body {
   align-self: flex-end; }
 
 .footer {
+  display: block;
+  background-image: linear-gradient(to right bottom, rgba(207, 72, 56, 0.2), rgba(243, 115, 92, 0.95)), url(../img/footer-img.jpg);
   background-color: #f3735c;
+  background-size: cover;
+  background-position: center;
+  color: #F8FFE5;
   grid-column: full-start / full-end;
-  grid-row: 5 / 6; }
+  grid-row: 5 / 6;
+  height: 40rem; }
 
 .header {
   display: block;
@@ -99,13 +113,13 @@ body {
       list-style-type: none;
       display: flex; }
     .header__navigation--item {
-      padding-left: 3rem; }
+      padding-left: 3rem;
+      font-family: "Ubuntu", sans-serif; }
     .header__navigation--link:link, .header__navigation--link:visited {
       text-decoration: none;
       color: inherit; }
-    .header__navigation--link:hover {
-      color: #cf4838;
-      font-weight: 700; }
+    .header__navigation--link:hover, .header__navigation--link:focus {
+      color: #cf4838; }
   .header__text-box {
     margin: 5rem;
     justify-self: flex-end; }
@@ -130,11 +144,7 @@ body {
     grid-row: 3 / 7;
     grid-column: 2 / 7;
     height: 100%;
-    margin-left: 1.5rem;
-    /*display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        */ }
+    margin-left: 1.5rem; }
     .about__content--text {
       color: #F8FFE5;
       font-size: 1.5rem; }
@@ -142,7 +152,27 @@ body {
 .contact {
   background-color: #F8FFE5;
   grid-column: full-start / full-end;
-  grid-row: 4 / 5; }
+  grid-row: 4 / 5;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(8, 1fr); }
+  .contact__img-1 {
+    width: 100%;
+    grid-column: 1 / 9;
+    grid-row: 1 / 9; }
+  .contact__content {
+    background-color: rgba(31, 32, 43, 0.98);
+    color: #F8FFE5;
+    padding: 3rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    grid-row: 3 / 7;
+    grid-column: 5 / 10;
+    margin-right: 1.5rem; }
+    .contact__content--text {
+      font-size: 1.5rem; }
 
 .portfolio {
   background-color: #1f202b;
@@ -191,13 +221,11 @@ body {
   .portfolio__img--4 {
     background-image: url(../../img/budget-webapp.png); }
   .portfolio__img--5 {
-    background-image: url(../../img/trillo-site.png); }
+    background-image: url(../../img/sticky-notes-webapp.png); }
   .portfolio__img--6 {
-    background-image: url(../../img/budget-webapp.png);
-    /*        background-image: linear-gradient(to right bottom, rgba(243,115,92,0.3), rgba(207,72,56,0.8)), url(../../img/budget-webapp.png);
-*/ }
+    background-image: url(../../img/name-tag-webapp.png); }
   .portfolio__text {
-    background-color: #1f202b;
+    background-color: inherit;
     color: #F8FFE5;
     padding: 2rem 0;
     display: flex;

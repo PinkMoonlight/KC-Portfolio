@@ -3,5 +3,33 @@
     grid-column: full-start / full-end;
     grid-row: 4 / 5;
 
-    
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+
+    &__img-1 {
+        width: 100%;
+        grid-column: 1 / 9;
+        grid-row: 1 / 9;
+    }
+
+    &__content {
+        background-color: rgba(31, 32, 43, 0.98);
+        color: $color-neutral;
+        padding: 3rem 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+
+        grid-row: 3 / 7;
+        grid-column: 5 / 10;
+        margin-right: 1.5rem;
+
+        &--text {
+            font-size: 1.5rem;
+        }
+    }
+
 }
+
