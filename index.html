@@ -23,9 +23,9 @@
       <!-- <img src="/img/kc-icon.png" class="header__navigation--logo" /> -->
     <nav class="header__navigation">
       <ul class="header__navigation--list">
-        <li class="header__navigation--item"><a href="#about" class="header__navigation--link">About</a></li>
-        <li class="header__navigation--item"><a href="#portfolio" class="header__navigation--link">Portfolio</a></li>
-        <li class="header__navigation--item"><a href="#contact" class="header__navigation--link">Contact</a></li>
+        <li class="header__navigation--item"><a href="#about" class="header__navigation--link" tabindex="1">About</a></li>
+        <li class="header__navigation--item"><a href="#portfolio" class="header__navigation--link" tabindex="2">Portfolio</a></li>
+        <li class="header__navigation--item"><a href="#contact" class="header__navigation--link" tabindex="3">Contact</a></li>
       </ul>
     </nav>
     <div class="header__text-box">
@@ -34,12 +34,13 @@
     </div>
   </header>
   <section class="about" id="about">
-    <img src="/img/about-img.jpg" alt="Women sitting at a desk facing a large window" class="about__img-1">
+    <div class="about__background"></div>
     <div class="about__content">
       <h3 class="about__content--heading heading-3 mb-md">About Me</h3>
-      <p class="about__content--text mb-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Earum nihil obcaecati iusto, nostrum soluta possimus. Recusandae itaque, officia doloremque, 
-        qui nesciunt numquam adipisci fugit ipsam ducimus placeat culpa! Nesciunt, nostrum?</p>
+      <p class="about__content--text mb-lg">My name is Kate. I am a Web Developer. I live most of the year in Los Gatos, California. 
+        I am an Australian (born and bred) but I have a wanderust to see as much of the world as I can. I love the Northern California weather, 
+        diversity and culture, and feel so blessed to reside here.  Coding, travelling and cooking are my three favourite ways to spend my time. 
+        Else reading/learning about these three things, or fitting in some cycling or tennis or yoga into my days. </p>
         <button class="btn btn--about">Click to know more</button>
     </div>
   </section>
@@ -126,7 +127,7 @@
   </section>
   
   <section class="contact" id="contact">
-    <img src="/img/contact-img.jpg" alt="San Francisco buildings from aerial photograph" class="contact__img-1">
+    <div class="contact__background"></div>
     <div class="contact__content">
       <h3 class="contact__content--heading heading-3 mb-lg">Contact Me</h3>
       <h4 class="heading-4 mb-mini">Location</h4>
@@ -136,8 +137,38 @@
     </div>
   </section>
   <footer class="footer">
-    
-    <p>Built and designed by Kate Cherie Fisher</p>
+    <h4 class="footer__heading heading-3">Follow Me</h4>
+    <ul class="footer__social-media">
+      <li class="footer__social-media--icon">
+        <a href="https://twitter.com/PinkMoonlight3" target="_blank" class="footer__social-media--link">
+         <svg class="twitter-icon">
+          <use xlink:href="../img/sprite.svg#icon-twitter1"></use>
+        </svg>
+        </a>
+      </li>
+      <li class="footer__social-media--icon">
+        <a href="https://www.linkedin.com/in/kate-cherie/" target="_blank" class="footer__social-media--link">
+          <svg class="linkedin-icon">
+            <use xlink:href="../img/sprite.svg#icon-linkedin"></use>
+          </svg>
+         </a>
+      </li>
+      <li class="footer__social-media--icon">
+        <a href="https://github.com/PinkMoonlight" target="_blank" class="footer__socia-media--link">
+          <svg class="github-icon">
+            <use xlink:href="../img/sprite.svg#icon-github"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="footer__social-media--icon">
+        <a href="https://www.instagram.com/kate_traveltrustlife/" target="_blank" class="footer__social-media--link">
+          <svg class="instagram-icon">
+            <use xlink:href="../img/sprite.svg#icon-instagram"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+    <p class="footer__copyright">Built & designed by Kate Cherie Fisher.</p>
   </footer>
   <script src="js/vendor/modernizr-3.8.0.min.js"></script>
   <script src="js/plugins.js"></script>

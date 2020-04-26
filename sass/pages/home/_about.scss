@@ -7,10 +7,17 @@
     grid-template-rows: repeat(8, 1fr);
     grid-template-columns: repeat(10, 1fr);
 
-    &__img-1 {
-        width: 100%;
+    &__background {
+        background-image: url(../img/about-img.jpg);
+        background-size: cover;
+        background-position: right;
         grid-row: 1 / 9;
         grid-column: 3 / 11;
+    }
+
+    &__img-1 {
+        //width: 100%;
+
     }
 
     &__content {

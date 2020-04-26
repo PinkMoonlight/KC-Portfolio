@@ -19,7 +19,9 @@
 
     &:active,
     &:focus {
-
+        color: $color-neutral;
+        background-color:  rgb(31, 32, 43);
+        outline: none;
     }
     
     &--about {

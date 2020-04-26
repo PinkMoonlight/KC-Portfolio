@@ -1,6 +1,7 @@
 .header {
     display: block;
-    background-image: linear-gradient(to right bottom, rgba(207,72,56,0.3), rgba(242, 116, 93, 0.95)),url(../img/hero.jpeg);
+    background-image: linear-gradient(to right bottom, rgba(248, 255, 229, 0.3),  rgba(242, 116, 93, 0.9)),url(../img/hero.jpeg);
+   //rgba(207,72,56,0.3),
     background-size: cover;
     background-color: $color-primary-light; 
     color: $color-neutral;
@@ -18,7 +19,7 @@
 
         &--list {
             list-style-type: none;
-            display: flex;
+            display: flex;    
         }
 
         &--item {
@@ -34,7 +35,8 @@
 
         &--link:hover,
         &--link:focus {
-            color: $color-primary-dark;
+            color: $color-primary-light;
+            outline: none;
         }
     }
 

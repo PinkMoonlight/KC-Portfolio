@@ -7,8 +7,11 @@
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(8, 1fr);
 
-    &__img-1 {
-        width: 100%;
+    &__background {
+        background-image: url(../img/contact-img.jpg);
+        background-size: cover;
+        //background-position: left;
+
         grid-column: 1 / 9;
         grid-row: 1 / 9;
     }

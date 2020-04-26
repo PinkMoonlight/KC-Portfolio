@@ -1,11 +1,11 @@
       /*COLOURS */
-    $color-primary-light: rgb(243, 115, 92);
+    $color-primary-light: rgb(242, 116, 93);
     $color-primary: rgb(241, 89, 70);
     $color-primary-dark: rgb(207, 72, 56);
 
     $color-contrast: #2b8c8c;
-    $color-neutral: #F8FFE5;
-    $color-dark-theme: #1f202b;
+    $color-neutral: rgb(248, 255, 229);
+    $color-dark-theme: rgb(31, 32, 43);
     $color-dark-alt: #283845;
     $color-darker-alt: #202C39;
 
@@ -36,7 +36,7 @@
 
     .container {
       display: grid;
-      grid-template-rows: 100vh repeat(4, min-content);
+      grid-template-rows: 100vh repeat(2, min-content) 100vh min-content;
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 
  

@@ -30,6 +30,11 @@
         position: relative;
     }
 
+    &__img:focus {
+        outline: none;
+        border: 3px solid $color-primary-dark;
+    }
+
     &__img::before,
     &__img::after {
         content: "";
