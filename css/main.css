@@ -23,7 +23,7 @@ body {
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
   .container__about {
     display: grid;
-    grid-template-rows: 50vh repeat(2, minmax(min-content, 95vh)) min-content;
+    grid-template-rows: 50vh repeat(1, minmax(min-content, 95vh)) min-content;
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
 .heading-1, .heading-2 {
@@ -147,8 +147,9 @@ body {
       list-style-type: none;
       display: flex; }
     .header__navigation--item {
-      padding-left: 3rem;
       font-family: "Ubuntu", sans-serif; }
+      .header__navigation--item:not(:first-child) {
+        padding-left: 3rem; }
     .header__navigation--link:link, .header__navigation--link:visited {
       text-decoration: none;
       color: inherit; }
@@ -286,41 +287,99 @@ body {
   color: #f8ffe5;
   grid-column: full-start / full-end;
   grid-row: 1 / 2;
-  display: flex;
-  flex-direction: column; }
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr); }
+  .header__about--title {
+    grid-row: 1 / 2;
+    grid-column: 2 / 5; }
 
 .bio {
   background-color: #f8ffe5;
-  grid-column: full-start / full-end; }
-  .bio__part-1, .bio__part-2 {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(10, 1fr); }
-  .bio__part-1 {
-    grid-row: 2 / 3; }
-  .bio__part-2 {
-    grid-row: 3 / 4; }
-  .bio__background--1, .bio__background--2 {
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); }
+  .bio__background {
+    background-image: url(../img/canal-img.jpg);
     background-size: cover;
-    background-position: center;
-    grid-row: 1 / 11; }
-  .bio__background--1 {
-    background-image: url(../img/about-img.jpg);
+    background-position: left;
     grid-column: 3 / 11; }
-  .bio__background--2 {
-    background-image: url(../img/about-img.jpg);
-    grid-column: 1 / 9; }
   .bio__content {
-    grid-column: 2 / 9;
-    grid-row: 2 / 10;
-    background-color: rgba(242, 116, 93, 0.95);
-    padding: 2rem 3rem;
-    margin-left: 1.5rem; }
-    .bio__content--2 {
-      padding-top: 5rem;
-      grid-column: 3 / 10; }
+    grid-column: 2 / 11;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: min-content repeat(6, minmax(1fr, min-content));
+    grid-gap: 3rem; }
   .bio__heading {
-    color: #f8ffe5; }
+    color: #1f202b;
+    padding-top: 3rem;
+    grid-column: 1 / 4;
+    grid-row: 1 /2; }
   .bio__text {
-    color: #f8ffe5;
-    font-size: 1.5rem; }
+    background-color: #f2745d;
+    font-size: 1.6rem;
+    padding: 3rem;
+    border-radius: 1rem; }
+    .bio__text--1, .bio__text--3, .bio__text--5 {
+      grid-column: 1 / 6; }
+    .bio__text--2, .bio__text--4, .bio__text--6 {
+      grid-column: 4 / 9; }
+
+/*
+.bio {
+    background-color: $color-neutral;
+    grid-column: full-start / full-end;
+
+    &__part-1,
+    &__part-2 {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+    }
+    &__part-1 {
+        grid-row: 2 / 3;
+    }
+    &__part-2 {
+        grid-row: 3 / 4;
+    }
+
+    &__background--1, 
+    &__background--2 {
+        background-size: cover;
+        background-position: center;
+        grid-row: 1 / 11;
+    }
+    &__background--1 {
+        background-image: url(../img/about-img.jpg);  
+        grid-column: 3 / 11;  
+    }
+
+    &__background--2 {
+        background-image: url(../img/plane-wing-img.jpg); 
+        background-position: center;
+        grid-column: 1 / 9;
+    }
+    &__content {
+        grid-column: 2 / 9;
+        grid-row: 2 / 10;
+
+        background-color: rgba(242, 116, 93, 0.95);
+        padding: 2rem 3rem;
+        margin-left: 1.5rem;
+
+        &--2 {
+            padding-top: 5rem;
+            grid-column: 3 / 10;
+        }
+    }
+    
+    &__heading {
+        color: $color-neutral;
+    }
+    
+    &__text {
+        color: $color-neutral;
+        font-size: 1.5rem;
+    }
+}
+*/

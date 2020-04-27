@@ -23,8 +23,11 @@
         }
 
         &--item {
-            padding-left: 3rem;
             font-family: $font-headings;
+
+            &:not(:first-child) {
+                padding-left: 3rem;
+            }
         }   
 
         &--link:link,
