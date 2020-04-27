@@ -1,0 +1,64 @@
+.header__about {
+    color: $color-neutral;
+    grid-column: full-start / full-end;
+    grid-row: 1 / 2;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.bio {
+    background-color: $color-neutral;
+    grid-column: full-start / full-end;
+
+    &__part-1,
+    &__part-2 {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+    }
+    &__part-1 {
+        grid-row: 2 / 3;
+    }
+    &__part-2 {
+        grid-row: 3 / 4;
+    }
+
+    &__background--1, 
+    &__background--2 {
+        background-size: cover;
+        background-position: center;
+        grid-row: 1 / 11;
+    }
+    &__background--1 {
+        background-image: url(../img/about-img.jpg);  
+        grid-column: 3 / 11;  
+    }
+
+    &__background--2 {
+        background-image: url(../img/about-img.jpg); 
+        grid-column: 1 / 9;
+    }
+    &__content {
+        grid-column: 2 / 9;
+        grid-row: 2 / 10;
+
+        background-color: rgba(242, 116, 93, 0.95);
+        padding: 2rem 3rem;
+        margin-left: 1.5rem;
+
+        &--2 {
+            padding-top: 5rem;
+            grid-column: 3 / 10;
+        }
+    }
+    
+    &__heading {
+        color: $color-neutral;
+    }
+    
+    &__text {
+        color: $color-neutral;
+        font-size: 1.5rem;
+    }
+}

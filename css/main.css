@@ -21,6 +21,10 @@ body {
   display: grid;
   grid-template-rows: 100vh repeat(2, min-content) 100vh min-content;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  .container__about {
+    display: grid;
+    grid-template-rows: 50vh repeat(2, minmax(min-content, 95vh)) min-content;
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
 .heading-1, .heading-2 {
   font-family: "Roboto Slab", serif;
@@ -65,6 +69,7 @@ body {
   margin-bottom: 8rem; }
 
 .btn, .btn:link, .btn:visited {
+  text-decoration: none;
   text-transform: uppercase;
   font-size: 1.3rem;
   border-radius: 1rem;
@@ -83,7 +88,7 @@ body {
   background-color: #1f202b;
   outline: none; }
 
-.btn--about {
+.btn--light {
   background-color: #f8ffe5;
   color: #283845;
   align-self: flex-end; }
@@ -154,6 +159,7 @@ body {
     margin: 5rem;
     justify-self: flex-end; }
 
+.heading-primary--main,
 .heading-primary--sub {
   text-align: right; }
 
@@ -274,4 +280,47 @@ body {
     display: inline-block; }
   .portfolio__description {
     padding: 0 3rem;
+    font-size: 1.5rem; }
+
+.header__about {
+  color: #f8ffe5;
+  grid-column: full-start / full-end;
+  grid-row: 1 / 2;
+  display: flex;
+  flex-direction: column; }
+
+.bio {
+  background-color: #f8ffe5;
+  grid-column: full-start / full-end; }
+  .bio__part-1, .bio__part-2 {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr); }
+  .bio__part-1 {
+    grid-row: 2 / 3; }
+  .bio__part-2 {
+    grid-row: 3 / 4; }
+  .bio__background--1, .bio__background--2 {
+    background-size: cover;
+    background-position: center;
+    grid-row: 1 / 11; }
+  .bio__background--1 {
+    background-image: url(../img/about-img.jpg);
+    grid-column: 3 / 11; }
+  .bio__background--2 {
+    background-image: url(../img/about-img.jpg);
+    grid-column: 1 / 9; }
+  .bio__content {
+    grid-column: 2 / 9;
+    grid-row: 2 / 10;
+    background-color: rgba(242, 116, 93, 0.95);
+    padding: 2rem 3rem;
+    margin-left: 1.5rem; }
+    .bio__content--2 {
+      padding-top: 5rem;
+      grid-column: 3 / 10; }
+  .bio__heading {
+    color: #f8ffe5; }
+  .bio__text {
+    color: #f8ffe5;
     font-size: 1.5rem; }
