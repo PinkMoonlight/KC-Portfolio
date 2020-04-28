@@ -11,7 +11,8 @@
         border: none;
         transition: all .2s; 
         cursor: pointer;
-        font-family: $font-main;  
+        font-family: $font-main; 
+        font-weight: 700; 
      }
 
     &:hover {
@@ -28,7 +29,7 @@
     
     &--light {
         background-color: $color-neutral;
-        color: $color-dark-alt;
+        color: #353640;
         align-self: flex-end;
     }
 }

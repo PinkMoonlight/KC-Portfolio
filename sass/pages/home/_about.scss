@@ -16,13 +16,15 @@
     }
 
     &__content {
-        background-color: rgba(242, 116, 93, 0.95);
-        padding: 2rem 3rem;
+        background-color: rgba(242, 116, 93, 0.93);
+        padding: 4rem 3rem;
 
         grid-row: 3 / 7;
         grid-column: 2 / 7;
         height: 100%;
         margin-left: 1.5rem;
+        display: flex;
+        flex-direction: column;
     
 
         &--text {
@@ -30,4 +32,5 @@
             font-size: 1.5rem;
         }
     }
+
 }

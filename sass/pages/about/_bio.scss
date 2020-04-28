@@ -1,11 +1,18 @@
+.container__about {
+    display: grid;
+    grid-template-rows: min-content repeat(1, minmax(min-content, 95vh)) min-content;
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]
+}
+
 .header__about {
     color: $color-neutral;
     grid-column: full-start / full-end;
     grid-row: 1 / 2;
+    padding-bottom: 5rem;
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
 
     &--title {
         grid-row: 1 / 2;
@@ -16,45 +23,46 @@
 .bio {
     background-color: $color-neutral;
     grid-column: full-start / full-end;
+    grid-row: 2 / 3;
 
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    //grid-template-rows: repeat(6, min-content);
+    grid-template-rows: repeat(6, 1fr);
 
     &__background {
         background-image: url(../img/canal-img.jpg);
         background-size: cover;
         background-position: left;
 
-        grid-column: 3 / 11;
-        //grid-row: 1 / 7;
+        grid-column: 1 / 9;
+        grid-row: 1 / 7;
     }
 
     &__content {
+        color: $color-neutral;
 
         grid-column: 2 / 11;
+        grid-row: 1 / 7;
 
         display: grid;
         grid-template-columns: repeat(9, 1fr);
-        grid-template-rows: min-content repeat(6, minmax(1fr, min-content));
         grid-gap: 3rem;
 
     }
 
     &__heading {
-        color: $color-dark-theme;
-        padding-top: 3rem;
-
-        grid-column: 1 / 4;
-        grid-row: 1 /2;
+        background-color: rgba(242, 116, 93, 0.95);
+        padding: 3rem 3rem 0 3rem;
+        grid-column: 1 / 5;
+        //grid-row: 2 / 3;
     }
 
     &__text {
-        background-color: $color-primary-light;
+        background-color: rgba(242, 116, 93, 0.93);
         font-size: 1.6rem;
         padding: 3rem;
-        //margin: 5rem 0;
-        border-radius: 1rem;
+        //border-radius: 1rem;
+        box-shadow: 0, 0, 0, 0.5;
 
         &--1, 
         &--3,
@@ -66,6 +74,10 @@
         &--4,
         &--6 {
             grid-column: 4 / 9;
+        }
+
+        &--1 {
+            margin-top: 3rem;
         }
     }
 

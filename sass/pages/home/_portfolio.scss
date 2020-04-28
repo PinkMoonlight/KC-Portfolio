@@ -9,10 +9,11 @@
     
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    grid-gap: 8rem;
-    
+    grid-template-rows: repeat(2, 50rem);
+    grid-gap: 8rem;    
 
     &__box {
+        align-self: start;
         display: flex;
         flex-direction: column;
         align-items: center;

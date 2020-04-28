@@ -1,19 +1,30 @@
 %heading {
     font-family: $font-title;
     font-weight: 400;
+    color: $color-neutral;
 }
 
 .heading-1 {
     @extend %heading;
     font-size: 8rem;
-    color: $color-neutral;
+    line-height: 1;
+}
+
+.heading-1-5 {
+    @extend %heading;
+    font-size: 6rem;
     line-height: 1;
 }
 
 .heading-2 {
     @extend %heading;
     font-size: 4rem;
-    color: $color-neutral;
+}
+
+.heading-2-5 {
+    @extend %heading;
+    font-size: 3.5rem;
+    color: $color-primary-light;
 }
 
 .heading-3 {
