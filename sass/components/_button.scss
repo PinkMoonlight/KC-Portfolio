@@ -4,15 +4,15 @@
     &:link,
     &:visited {
         text-decoration: none;
-        text-transform: uppercase;
-        font-size: 1.3rem;
+        //text-transform: uppercase;
+        font-size: 1.4rem;
         border-radius: 1rem;
         padding: 1.1rem 2rem;
         border: none;
         transition: all .2s; 
         cursor: pointer;
         font-family: $font-main; 
-        font-weight: 700; 
+        font-weight: 500; 
      }
 
     &:hover {

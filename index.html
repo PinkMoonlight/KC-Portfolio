@@ -20,7 +20,24 @@
 
 <body class="container">
   <header class="header">
+    <!---------PHONE NAVIGATION--------->
+    <div class="phone-nav">
+      <svg class="phone-nav__close_icon" >
+        <use xlink:href="img/sprite.svg#icon-cross"></use>
+      </svg>
+      <ul class="phone-nav__list">
+        <li class="phone-nav__item"><a href="#about" class="phone-nav__link">About</a></li>
+        <li class="phone-nav__item"><a href="#portfolio" class="phone-nav__link">Portfolio</a></li>
+        <li class="phone-nav__item"><a href="#contact" class="phone-nav__link">Contact</a></li>
+      </ul>
+    </div>
     <nav class="header__navigation">
+      <div class="navigation">
+          <svg class="navigation__icon">
+            <use xlink:href="../img/sprite.svg#icon-menu"></use>
+          </svg>
+      </div>
+          <!-------LARGER SCREEN NAVIGATION------>
       <ul class="header__navigation--list">
         <li class="header__navigation--item"><a href="#about" class="header__navigation--link" tabindex="1">About</a></li>
         <li class="header__navigation--item"><a href="#portfolio" class="header__navigation--link" tabindex="2">Portfolio</a></li>
@@ -36,7 +53,7 @@
     <div class="about__background"></div>
     <div class="about__content">
       <h3 class="about__content--heading heading-3 mb-md">About Me</h3>
-      <p class="about__content--text mb-lg">My name is Kate. I am a Web Developer. I live most of the year in Los Gatos, California. 
+      <p class="about__content--text mb-sm">My name is Kate. I am a Web Developer. I live most of the year in Los Gatos, California. 
         I am an Australian (born and bred) but I have a wanderust to see as much of the world as I can. I love the Northern California weather, 
         diversity and culture, and feel so blessed to reside here.  Coding, travelling and cooking are my three favourite ways to spend my time. 
         Else reading/learning about these three things, or fitting in some cycling or tennis or yoga into my days. </p>
@@ -101,8 +118,7 @@
         <h4 class="heading-4 portfolio__box--heading">React Project</h4>
         <p class="portfolio__description">
            A sticky notes UI built with ReactJS with functionality for creating new notes, editing each note, searching through the notes for keywords, 
-          deleting a note and saving notes to local storage.
-        </p>
+          and deleting a note.  Lifecycle methods save the notes to local storage so the lists can be accessed locally after closing the app window.
       </div>
     </div>
     <div class="portfolio__box">
@@ -112,9 +128,8 @@
       <div class="portfolio__text">
         <h4 class="heading-4 portfolio__box--heading">React Project</h4>
         <p class="portfolio__description">
-            Used ReactJS to build this Name Tag Generator UI.  It has an input field to generate a new name tag based on the name the 
-            user typed and submitted. I added functionality to delete a selected name tag on click, and used lifecycle methods to save 
-            the names to local storage. 
+            A Name Tag Generator UI built with ReactJS.  It has an input field to generate a new name tag based on the name 
+            submitted. There is functionality to delete a name tag, and the tags data is saved to local storage for future reference locally.
         </p> 
       </div>
    </div>

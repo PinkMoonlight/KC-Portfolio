@@ -1,0 +1,50 @@
+// MEDIA QUERY MANAGER 
+
+/* 
+0   - 400px:        sm phone (max-width)
+400 - 600px:        phone  (max-width)
+600 - 900px:        tablet Portrait   (max-width)
+900 - 1200px:       tablet Landscape    (max-width)  *ABOUT section
+[1200 - 1800px]     is normal desktop styles     (max-width)
+1800px + :          Big desktop  (min width)
+
+
+$ breakpoint arguement choices:
+- sm-phone
+- phone
+- tap-port
+- tab-land
+- big-desktop
+
+1em = 16px
+*/
+
+
+//ORDER:  Base + typography > general layout + grids > page layout > components 
+
+
+
+@mixin respond($breakpoint) {
+
+    @if $breakpoint == sm-phone {
+        @media (max-width: 25em) { @content };  // is it less then 400px? 
+    }
+
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) { @content };    // 600px
+    }
+
+    @if $breakpoint == tab-port {
+        @media (max-width: 56.25em) { @content };     // 900px
+    }
+
+    @if $breakpoint == tab-land {
+        @media (max-width: 75em) { @content };      // 1200px
+    }
+
+    @if $breakpoint == big-desktop {
+        @media (min-width: 112.5em) { @content };  //is it larger then 1800px?
+    }
+
+
+}

@@ -1,3 +1,21 @@
+/* 
+0   - 400px:        sm phone (max-width)
+400 - 600px:        phone  (max-width)
+600 - 900px:        tablet Portrait   (max-width)
+900 - 1200px:       tablet Landscape    (max-width)  *ABOUT section
+[1200 - 1800px]     is normal desktop styles     (max-width)
+1800px + :          Big desktop  (min width)
+
+
+$ breakpoint arguement choices:
+- sm-phone
+- phone
+- tap-port
+- tab-land
+- big-desktop
+
+1em = 16px
+*/
 /*COLOURS */
 /* FONTS */
 *,
@@ -9,6 +27,18 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 43.75%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   font-family: "Montserrat", sans-serif;
@@ -73,15 +103,14 @@ body {
 
 .btn, .btn:link, .btn:visited {
   text-decoration: none;
-  text-transform: uppercase;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   border-radius: 1rem;
   padding: 1.1rem 2rem;
   border: none;
   transition: all .2s;
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
-  font-weight: 700; }
+  font-weight: 500; }
 
 .btn:hover {
   transform: translateY(-3px);
@@ -96,6 +125,68 @@ body {
   background-color: #f8ffe5;
   color: #353640;
   align-self: flex-end; }
+
+.navigation {
+  align-self: flex-start;
+  position: absolute;
+  left: 2.5rem;
+  top: 2.5rem;
+  visibility: hidden; }
+  @media (max-width: 37.5em) {
+    .navigation {
+      visibility: visible; } }
+  .navigation__icon {
+    height: 4rem;
+    width: 4rem;
+    fill: #f8ffe5;
+    position: absolute; }
+  .navigation__invisible {
+    visibility: hidden; }
+
+.phone-nav {
+  background-color: rgba(248, 255, 229, 0.85);
+  height: 50vh;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  visibility: hidden;
+  overflow: hidden;
+  opacity: 0;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.35); }
+  .phone-nav__close_icon {
+    position: absolute;
+    height: 4rem;
+    width: 4rem;
+    fill: #1f202b;
+    top: 1rem;
+    left: 1rem; }
+  .phone-nav__list {
+    position: absolute;
+    width: 80%;
+    list-style-type: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .phone-nav__item {
+    margin: 4rem 0;
+    padding: 1.5rem 0;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.55);
+    text-align: center;
+    border-radius: 2px;
+    background-image: linear-gradient(to bottom right, rgba(248, 255, 229, 0.85), rgba(242, 116, 93, 0.98)); }
+  .phone-nav__link:link, .phone-nav__link:visited {
+    font-size: 3rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: #1f202b; }
+
+.menu-open {
+  visibility: visible;
+  width: 70vw;
+  opacity: 1; }
 
 .footer {
   display: block;
@@ -118,7 +209,7 @@ body {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2rem; }
     .footer__social-media--icon {
-      padding-right: 4rem; }
+      padding: 0 2rem; }
     .footer__social-media--link:link, .footer__social-media--link:visited {
       text-decoration: none;
       cursor: pointer; }
@@ -144,12 +235,25 @@ body {
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between; }
+  @media (max-width: 37.5em) {
+    .header {
+      background-position: center; } }
+  @media (max-width: 25em) {
+    .header {
+      background-position: left; } }
   .header__navigation {
     font-size: 3rem;
-    margin: 2rem 5rem; }
+    padding: 2rem 5rem 2rem 2rem;
+    display: flex;
+    justify-content: space-between; }
     .header__navigation--list {
       list-style-type: none;
+      margin-left: 25rem;
       display: flex; }
+      @media (max-width: 37.5em) {
+        .header__navigation--list {
+          visibility: hidden;
+          display: none; } }
     .header__navigation--item {
       font-family: "Ubuntu", sans-serif; }
       .header__navigation--item:not(:first-child) {
@@ -163,6 +267,9 @@ body {
   .header__text-box {
     margin: 5rem;
     justify-self: flex-end; }
+    @media (max-width: 25em) {
+      .header__text-box {
+        margin: 3rem; } }
 
 .heading-primary--main,
 .heading-primary--sub {

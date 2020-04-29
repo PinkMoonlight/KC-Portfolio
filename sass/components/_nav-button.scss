@@ -1,0 +1,86 @@
+.navigation {
+    align-self: flex-start;
+    position: absolute;
+    left: 2.5rem;
+    top: 2.5rem;
+    visibility: hidden;
+
+    @include respond(phone) { // width < 600?
+       visibility: visible;
+    }
+
+    &__icon {
+        height: 4rem;
+        width: 4rem;
+        fill: $color-neutral;
+        position: absolute;
+    }
+
+    &__invisible { // for when menu is open due to opacity of menu
+        visibility: hidden;
+    } 
+}
+
+
+
+.phone-nav {
+    background-color: rgba(248, 255, 229, 0.85);
+    height: 50vh;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    visibility: hidden;
+    overflow: hidden;
+    opacity: 0;
+    //width: 70vw;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 2rem rgba(0,0,0,0.35);
+
+
+    &__close_icon {
+        position: absolute;
+        height: 4rem;
+        width: 4rem;
+        fill: $color-dark-theme;
+        top: 1rem;
+        left: 1rem;
+    }
+
+    &__list {
+        position: absolute;
+        width: 80%;
+
+        list-style-type: none;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    &__item {
+        margin: 4rem 0;
+        padding: 1.5rem 0;
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.55);
+        text-align: center;
+        border-radius: 2px;
+        background-image: linear-gradient(to bottom right, rgba(248, 255, 229, 0.85), rgba(242, 116, 93, 0.98));
+
+    }
+
+    &__link:link,
+    &__link:visited {
+        font-size: 3rem;
+        font-weight: 500;
+        text-decoration: none;
+        color: $color-dark-theme;
+    }
+}
+
+
+.menu-open {
+    visibility: visible;
+    width: 70vw;
+    opacity: 1;
+}

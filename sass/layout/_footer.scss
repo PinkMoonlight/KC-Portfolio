@@ -20,10 +20,11 @@
         list-style: none;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-gap: 2rem;;
+        grid-gap: 2rem;
+        
 
         &--icon {
-            padding-right: 4rem;
+            padding: 0 2rem;
         }
 
 
