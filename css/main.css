@@ -172,12 +172,17 @@ body {
     transform: translate(-50%, -50%); }
   .phone-nav__item {
     margin: 4rem 0;
-    padding: 1.5rem 0;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.55);
     text-align: center;
     border-radius: 2px;
     background-image: linear-gradient(to bottom right, rgba(248, 255, 229, 0.85), rgba(242, 116, 93, 0.98)); }
+  .phone-nav__link {
+    padding: 1.5rem 11rem; }
+    .phone-nav__link:last-child {
+      padding: 1.5rem 8rem; }
   .phone-nav__link:link, .phone-nav__link:visited {
+    display: inline-block;
+    width: inherit;
     font-size: 3rem;
     font-weight: 500;
     text-decoration: none;

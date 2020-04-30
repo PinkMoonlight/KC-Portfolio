@@ -19,7 +19,25 @@
 </head>
 <body class="container__about"> 
     <header class="header__about">
+      <!---------PHONE NAVIGATION--------->
+        <div class="phone-nav">
+            <svg class="phone-nav__close_icon" >
+              <use xlink:href="../img/sprite.svg#icon-cross"></use>
+            </svg>
+            <ul class="phone-nav__list">
+              <li class="phone-nav__item"><a href="../index.html" class="phone-nav__link">Home</a></li>
+              <li class="phone-nav__item"><a href="../index.html#portfolio" class="phone-nav__link">Portfolio</a></li>
+              <li class="phone-nav__item"><a href="../index.html#contact" class="phone-nav__link">Contact</a></li>
+              <li class="phone-nav__item"><a href="../index.html#footer" class="phone-nav__link">Follow Me</a></li>
+            </ul>
+          </div>
         <nav class="header__navigation">
+          <div class="navigation">
+              <svg class="navigation__icon">
+                <use xlink:href="../img/sprite.svg#icon-menu"></use>
+              </svg>
+          </div>
+            <!-------LARGER SCREEN NAVIGATION------>
             <ul class="header__navigation--list">
               <li class="header__navigation--item"><a href="../index.html" class="header__navigation--link" tabindex="1">Home</a></li>
               <li class="header__navigation--item"><a href="../index.html#portfolio" class="header__navigation--link" tabindex="2">Portfolio</a></li>
@@ -114,9 +132,9 @@
     </footer>
 
 
-<script src="js/vendor/modernizr-3.8.0.min.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
+<script src="../js/vendor/modernizr-3.8.0.min.js"></script>
+<script src="../js/plugins.js"></script>
+<script src="../js/main.js"></script>
 </body>
 
 </html>

@@ -61,7 +61,6 @@
 
     &__item {
         margin: 4rem 0;
-        padding: 1.5rem 0;
         box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.55);
         text-align: center;
         border-radius: 2px;
@@ -69,8 +68,18 @@
 
     }
 
+    &__link {
+        padding: 1.5rem 11rem;
+
+        &:last-child {
+            padding: 1.5rem 8rem;
+        }
+    }
     &__link:link,
     &__link:visited {
+        display: inline-block;
+        //padding: 1.5rem 10;
+        width: inherit;
         font-size: 3rem;
         font-weight: 500;
         text-decoration: none;
