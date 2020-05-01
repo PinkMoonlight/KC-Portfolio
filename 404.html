@@ -5,57 +5,257 @@
   <meta charset="utf-8">
   <title>Page Not Found</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto+Slab:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Ubuntu:400,500,700&display=swap" rel="stylesheet">
+
   <style>
     * {
-      line-height: 1.2;
+      line-height: 1.7  ;
       margin: 0;
+      padding: 0;
+      box-sizing: inherit;
     }
 
     html {
       color: #888;
-      display: table;
-      font-family: sans-serif;
-      height: 100%;
+      font-family: 'Montserrat', sans-serif;
       text-align: center;
-      width: 100%;
+
     }
 
     body {
-      display: table-cell;
-      vertical-align: middle;
-      margin: 2em auto;
+        grid-column: 1 /4;
+        background-color: rgb(248, 255, 229);
+    }
+
+    main {
+      margin: 3rem;
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+
     }
 
     h1 {
-      color: #555;
-      font-size: 2em;
+      color:rgb(248, 255, 229);
+      font-family: 'Roboto Slab', serif;;
+      font-size: 4em;
       font-weight: 400;
+
     }
+
+    h2 {
+        color: rgb(242, 116, 93);
+        font-family: 'Roboto Slab', serif;;
+        font-size: 2em;
+      }
 
     p {
       margin: 0 auto;
-      width: 280px;
     }
 
-    @media only screen and (max-width: 280px) {
 
-      body,
-      p {
-        width: 95%;
+  .container {
+    display: grid;
+    grid-template-rows: min-content repeat(1, minmax(min-content, 95vh)) min-content;
+    grid-template-columns: [full-start] minmax(6eem, 1fr) [center-start] repeat(1, [col-start] minmax(max-content, 1fr) [col-end]) [center-end] minmax(6em, 1fr) [full-end]
+}
+
+  .header {
+      color: rgb(248, 255, 229);
+      grid-column: full-start / full-end;
+      grid-row: 1 / 2;
+      margin-left: -22rem;
+      background-color: rgb(31, 32, 43);
+
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(1, max-content);
+  }
+  .header--title {
+    padding: 1em 3em 1em 0;
+    grid-row: 1 / 2;
+    grid-column: 2 / 5;
+    text-align: right;
       }
 
-      h1 {
-        font-size: 1.5em;
-        margin: 0 0 0.3em;
+      .navigation {
+      align-self: flex-start;
+      position: absolute;
+      left: 2.5rem;
+      top: 2.5rem;
+      visibility: hidden;
       }
+
+      .header__navigation--list {
+        color: rgb(248, 255, 229);
+        list-style-type: none;
+        margin-left: 25rem;
+        display: flex;  
+      }
+
+      .header__navigation--item {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 2em;
+      }
+
+      .header__navigation--link:link,
+      .header__navigation--link:visited {
+        text-decoration: none;
+        color: inherit;
+      }
+
+
+      .header__navigation--link:hover,
+      .header__navigation--link:focus {
+            color: rgb(242, 116, 93);
+            outline: none;
+    }
+
+      .navigation__icon {
+          height: 4rem;
+          width: 4rem;
+          fill: rgb(248, 255, 229);
+          position: absolute;
+      }
+
+      .navigation__invisible { 
+          visibility: hidden;
+      } 
+
+
+  .phone-nav {
+      background-color: rgba(248, 255, 229, 0.85);
+      height: 70vh;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 500;
+      visibility: hidden;
+      overflow: hidden;
+      opacity: 0;
+      border-radius: 3px;
+      box-shadow: 0 1.5rem 2rem rgba(0,0,0,0.35);
+  }
+
+      .phone-nav__close_icon {
+          position: absolute;
+          height: 4rem;
+          width: 4rem;
+          fill: rgb(31, 32, 43);
+          top: 1rem;
+          left: 1rem;
+      }
+
+      .phone-nav__list {
+          position: absolute;
+          width: 80%;
+
+          list-style-type: none;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+      }
+
+      .phone-nav__item {
+          margin: 4rem 0;
+          box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.55);
+          text-align: center;
+          border-radius: 2px;
+          background-image: linear-gradient(to bottom right, rgba(248, 255, 229, 0.85), rgba(242, 116, 93, 0.98));
+      }
+
+      .phone-nav__link {
+          padding: 1.5rem 11rem;
+      }
+      .phone-nav__link:last-child {
+          padding: 1.5rem 6rem;
+      }
+      
+      .phone-nav__link:link,
+      .phone-nav__link:visited {
+          display: inline-block;
+          /*padding: 1.5rem 10; */
+          width: inherit;
+          font-size: 3rem;
+          font-weight: 500;
+          text-decoration: none;
+          color: rgb(31, 32, 43);
+      }
+
+  .menu-open {
+      visibility: visible;
+      width: 70vw;
+      opacity: 1;
+  }
+  .oops {
+    color: rgb(31, 32, 43);
+    font-size: 2em;
+    letter-spacing: 1.5px;
+  }
+
+  .error-list {
+    padding: 2em 4em;
+    text-align: left;
+  }
+
+  @media only screen and (min-width: 600px) {
+        .navigation {
+          visibility: visible,
+      }
+    }
+
+
+    @media only screen and (min-width: 340px) {
+
+      
 
     }
   </style>
 </head>
 
-<body>
-  <h1>Page Not Found</h1>
-  <p>Sorry, but the page you were trying to view does not exist.</p>
+<body class="container">
+    <header class="header">
+        <!---------PHONE NAVIGATION--------->
+          <div class="phone-nav">
+              <svg class="phone-nav__close_icon" >
+                <use xlink:href="../img/sprite.svg#icon-cross"></use>
+              </svg>
+              <ul class="phone-nav__list">
+                <li class="phone-nav__item"><a href="index.html" class="phone-nav__link">Home</a></li>
+              </ul>
+            </div>
+          <nav class="header__navigation">
+            <div class="navigation">
+                <svg class="navigation__icon">
+                  <use xlink:href="../img/sprite.svg#icon-menu"></use>
+                </svg>
+            </div>
+              <!-------LARGER SCREEN NAVIGATION------>
+              <ul class="header__navigation--list">
+                <li class="header__navigation--item"><a href="index.html" class="header__navigation--link" tabindex="1">Home</a></li>
+              </ul>
+          </nav>
+          <div class="header__text-box header--title">
+              <h1 class="heading-primary--main heading-1-5 mb-sm">Kate Cherie</h1>
+              <h2 class="heading-primary--sub heading-2-5">Web Developer</h2>
+          </div>        
+      </header>
+      <main>
+         <h3><span class="oops">Oops...</span> Something is broken.</h3>
+         <p>Sorry, but the page you were trying to view does not exist.</p>
+         <br>
+         <p>Here’s a list of possible reasons for the 404 error:</p>
+        <ul class="error-list">
+          <li>Mistyped URL</li>
+          <li>Copy-and-paste error</li>
+          <li>Broken link</li>
+          <li>Truncated link</li>
+          <li>Moved content</li>
+          <li>Deleted content</li>
+        </ul>
+     </main>
+
 </body>
 
 </html>

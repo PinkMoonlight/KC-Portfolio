@@ -1,6 +1,6 @@
 .footer {
     display: block;
-    padding: 4rem 4rem 2rem 4rem;
+    padding: 4rem 4rem 1rem 4rem;
     background-image: linear-gradient(to right bottom, rgba(248, 255, 229, 0.6) , rgba(242, 116, 93, 0.95)), url(../img/footer-img.jpg);
     // rgba(207,72,56,0.2) linear-gradient(to right bottom,  rgba(242, 116, 93  , 0.3), rgba(242, 116, 93, 0.4)),url(../img/footer-img.jpg);
     background-color: rgb(242, 116, 93);
@@ -11,22 +11,35 @@
     grid-row: 5 / 6;
 
     height: 30rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    //flex-direction: column;
+    //justify-content: space-between;
+    //align-items: center;
+
+    &__heading {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        align-self: center;
+        justify-self: center;
+
+    }
 
     &__social-media {
+        grid-column: 2 / 3;
+        grid-row: 1 / 21;
+        align-self: center;
+        justify-self: center;
+
         list-style: none;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 2rem;
-        
 
         &--icon {
             padding: 0 2rem;
         }
-
 
         &--link:link,
         &--link:visited {
@@ -36,7 +49,12 @@
     }
 
     &__copyright {
+        grid-column: 2/ 3;
+        grid-row: 6 / 7;
         font-size: 1.4rem;
+        //padding-top: 2rem;
+        align-self: center;
+        justify-self: center;
     }
 
     .instagram-icon,
@@ -46,5 +64,16 @@
         height: 5rem;
         width: 5rem;
         fill: $color-dark-theme;
+    }
+    &__home-icon {
+        height: 4rem;
+        width: 4rem;
+        fill: $color-neutral;
+    }
+
+    &__home-box {
+       grid-column: 20 / 21;
+       grid-row: 6 / 7;
+
     }
 }

@@ -1,7 +1,5 @@
 .portfolio {
     background-color: $color-dark-theme; 
-    /* $color-darker-alt
-         $color-dark-alt;*/
     grid-column: center-start / center-end;
     grid-row: 3 / 4;
     margin: 15rem 0;
@@ -29,9 +27,10 @@
         position: relative;
     }
 
-    &__img:focus {
+    &__img:focus, 
+    &__img:hover {
         outline: none;
-        border: 3px solid $color-primary-dark;
+        border: 3px solid $color-primary;
     }
 
     &__img::before,
@@ -95,6 +94,10 @@
     &__description {
         padding: 0 3rem;
         font-size: 1.5rem;
+
+        @include respond(sm-phone) { // width < 400?
+            font-size: 1.7rem;
+        }
     }
 }
 

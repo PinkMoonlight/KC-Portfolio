@@ -7,12 +7,17 @@
     grid-template-rows: repeat(8, 1fr);
     grid-template-columns: repeat(10, 1fr);
 
+
     &__background {
         background-image: url(../img/about-img.jpg);
         background-size: cover;
         background-position: right;
         grid-row: 1 / 9;
         grid-column: 3 / 11;
+
+        @include respond(phone) { // width < 600?
+            grid-column: 1 / 11;
+        }
     }
 
     &__content {
@@ -25,11 +30,24 @@
         margin-left: 1.5rem;
         display: flex;
         flex-direction: column;
-    
+
+        @include respond(tab-port) { // width < 900?
+            grid-column: 2 / 8;
+        }
+
+        @include respond(phone) { // width < 600?
+            grid-column: 2 / 10;
+            margin-left: 0;
+        }
+
 
         &--text {
             color: $color-neutral;
             font-size: 1.5rem;
+
+            @include respond(sm-phone) { // width < 400?
+                font-size: 1.7rem;
+            }
         }
     }
 

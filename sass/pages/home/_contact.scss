@@ -10,10 +10,13 @@
     &__background {
         background-image: url(../img/contact-img.jpg);
         background-size: cover;
-        //background-position: left;
 
         grid-column: 1 / 9;
         grid-row: 1 / 9;
+
+        @include respond(phone) { // width < 600?
+            grid-column: 1 / 11;
+        }
     }
 
     &__content {
@@ -31,6 +34,19 @@
 
         &--text {
             font-size: 1.5rem;
+
+            @include respond(sm-phone) { // width < 400?
+                font-size: 1.7rem;
+            }
+        }
+
+        @include respond(tab-port) { // width < 900?
+            grid-column: 2 / 8;
+        }
+
+        @include respond(phone) { // width < 600?
+            grid-column: 2 / 10;
+            margin-left: 0;
         }
     }
 
