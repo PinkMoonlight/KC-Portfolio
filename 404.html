@@ -20,7 +20,6 @@
       color: #888;
       font-family: 'Montserrat', sans-serif;
       text-align: center;
-
     }
 
     body {
@@ -32,7 +31,6 @@
       margin: 3rem;
       grid-column: 2 / 3;
       grid-row: 2 / 3;
-
     }
 
     h1 {
@@ -40,7 +38,6 @@
       font-family: 'Roboto Slab', serif;;
       font-size: 4em;
       font-weight: 400;
-
     }
 
     h2 {
@@ -50,7 +47,7 @@
       }
 
     p {
-      margin: 0 auto;
+      margin: 1em auto;
     }
 
 
@@ -195,8 +192,14 @@
   }
 
   .error-list {
-    padding: 2em 4em;
-    text-align: left;
+    padding: 2em auto;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .errors {
+    color: rgb(31, 32, 43);
+    font-weight: 700; 
   }
 
   @media only screen and (min-width: 600px) {
@@ -242,18 +245,23 @@
           </div>        
       </header>
       <main>
-         <h3><span class="oops">Oops...</span> Something is broken.</h3>
-         <p>Sorry, but the page you were trying to view does not exist.</p>
-         <br>
-         <p>Here’s a list of possible reasons for the 404 error:</p>
-        <ul class="error-list">
-          <li>Mistyped URL</li>
-          <li>Copy-and-paste error</li>
-          <li>Broken link</li>
-          <li>Truncated link</li>
-          <li>Moved content</li>
-          <li>Deleted content</li>
-        </ul>
+        <div>
+            <h3><span class="oops">Oops...</span> Something is broken.</h3>
+            <p>Sorry, but the page you were trying to view does not exist.</p>
+            <br>
+        </div>
+        <div class="error-list">
+            <p class="errors">Here’s a list of possible reasons for the 404 error:</p>
+            <ul>
+              <li>Mistyped URL</li>
+              <li>Copy-and-paste error</li>
+              <li>Broken link</li>
+              <li>Truncated link</li>
+              <li>Moved content</li>
+              <li>Deleted content</li>
+            </ul>
+        </div>
+
      </main>
 
 </body>
