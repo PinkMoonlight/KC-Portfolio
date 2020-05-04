@@ -1,14 +1,39 @@
+.portfolio__container {
+    background-color: $color-dark-theme; 
+    grid-column: full-start / full-end;
+    grid-row: 4 / 5;
+
+    display: grid;
+    grid-template-columns: [portfolio-start] minmax(6rem, 1fr) [port-center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [port-center-end] minmax(6rem, 1fr) [portfolio-end];
+
+}
+
 .portfolio {
     background-color: $color-dark-theme; 
-    grid-column: center-start / center-end;
-    grid-row: 3 / 4;
-    margin: 15rem 0;
+    grid-column: port-center-start / port-center-end;
+    margin: 7.5rem 0 15rem 0;
     z-index: 1;
     
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    grid-template-rows: repeat(2, 50rem);
-    grid-gap: 8rem;    
+    grid-gap: 8rem;   
+    
+    @include respond(phone) {
+        grid-column-gap: 9rem;
+        grid-row-gap: 8rem;
+    }
+    
+
+    &__main-heading {
+        font-family: $font-headings;
+        font-weight: 400;
+        font-size: 4rem;
+        line-height: 1;
+        padding-top: 7.5rem;
+        grid-column: port-center-start/ port-center-end;
+        justify-self: center;
+        color: $color-neutral;
+    }
 
     &__box {
         align-self: start;
@@ -19,12 +44,13 @@
     }
 
     &__img {
+        position: relative;
         background-size: cover;
         background-position: center;
 
         height: 18rem;
         width: 28rem;
-        position: relative;
+        
     }
 
     &__img:focus, 
@@ -39,7 +65,7 @@
         position: absolute;
         width: inherit;
         height: inherit;
-        transition: all;
+        //transition: all;
     }
     &__img::before {
         border: 3px solid #f3735c;
@@ -88,14 +114,13 @@
         background-color: inherit;
         color:  $color-primary-light;
         padding: 2rem;
-        display: inline-block;    
     }
 
     &__description {
         padding: 0 3rem;
         font-size: 1.5rem;
 
-        @include respond(sm-phone) { // width < 400?
+        @include respond(sm-phone) { 
             font-size: 1.7rem;
         }
     }

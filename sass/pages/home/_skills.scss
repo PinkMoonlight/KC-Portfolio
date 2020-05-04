@@ -1,0 +1,122 @@
+.skills__container {
+    background-color: $color-neutral;
+    grid-column: full-start / full-end;
+    grid-row: 3 / 4;
+
+    display: grid;
+    grid-template-columns: [skill-start] minmax(6rem, 1fr) [sk-center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [sk-center-end] minmax(6rem, 1fr) [skill-end];
+
+    @media only screen and (max-width: 20em) {
+        grid-template-columns: [skill-start] minmax(3rem, 1fr) [sk-center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [sk-center-end] minmax(3rem, 1fr) [skill-end];
+    } 
+}
+
+.skills {  
+    background-color: $color-neutral; 
+    grid-column: sk-center-start / sk-center-end;
+    margin: 7.5rem 0 15rem 0;
+    z-index: 1; 
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 8rem; 
+
+    @include respond(tab-port) { 
+        grid-template-columns: 40rem;
+        justify-content: center;
+        grid-column-gap: 20rem;
+        grid-row-gap: 8rem;
+
+    }
+
+    &__main-heading {
+        font-family: $font-headings;
+        font-weight: 400;
+        font-size: 4rem;
+        line-height: 1;
+        grid-row: 1 / 2;
+        padding-top: 7.5rem;
+        grid-column: sk-center-start/ sk-center-end;
+        justify-self: center;
+        color: $color-dark-theme;
+    }
+    
+}
+
+.skill {
+
+    &__box {
+        align-self: start;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__imagebox {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 28rem;
+        height: 18rem;
+        background-color: $color-dark-theme;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            //transition: all;
+        }
+        &::before {
+            border: 3px solid #f3735c;
+            top: -12px;
+            left: -12px;
+            z-index: -1;
+        }
+    
+        &::after {
+            border: 3px solid #fecfb2;
+            top: 12px;
+            left: 12px;
+            z-index: 3;
+        }
+
+        &--html-icon,
+        &--react-icon,
+        &--git-icon {
+            stroke: $color-neutral;
+            fill: $color-neutral; 
+            stroke-width: 0;
+            height: 8rem;
+            width: 8rem;
+        } 
+    }
+
+    &__textbox {
+        background-color: inherit;
+        padding: 2rem 0;
+
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    &__heading {
+        background-color: inherit;
+        color:  $color-primary-light;
+        padding: 2rem;
+    }
+
+    &__description {
+        color: $color-dark-theme;
+        padding: 0 3rem;
+        font-size: 1.5rem;
+
+        @include respond(sm-phone) {
+            font-size: 1.7rem;
+        }
+    }
+}

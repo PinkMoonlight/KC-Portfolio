@@ -3,15 +3,16 @@
   
   @import "base/base";
   @import "base/typography";
-
+  
   @import "components/button";
   @import "components/nav-button";
  
   @import "layout/footer";
   @import "layout/header";
   
-
+  @import "pages/about/bio";
   @import "pages/home/about";
   @import "pages/home/contact";
   @import "pages/home/portfolio";
-  @import "pages/about/bio";
+  @import "pages/home/skills";
+  

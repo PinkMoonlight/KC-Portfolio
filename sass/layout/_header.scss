@@ -14,10 +14,10 @@
     justify-content: space-between;
 
     
-    @include respond(phone) { // width < 600?
+    @include respond(phone) {
         background-position: center; 
     }
-    @include respond(sm-phone) { // width < 400?
+    @include respond(sm-phone) { 
         background-position: left; 
     }
     
@@ -33,7 +33,7 @@
             margin-left: 25rem;
             display: flex;    
 
-            @include respond(phone) { // width < 600?
+            @include respond(phone) {
                 visibility: hidden;
                 display: none; 
             }
@@ -64,7 +64,7 @@
         margin: 5rem;
         justify-self: flex-end;
 
-        @include respond(sm-phone) { // width < 400?
+        @include respond(sm-phone) {
             margin: 3rem;
         }
 

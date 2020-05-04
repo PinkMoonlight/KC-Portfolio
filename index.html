@@ -27,6 +27,7 @@
       </svg>
       <ul class="phone-nav__list">
         <li class="phone-nav__item"><a href="#about" class="phone-nav__link">About</a></li>
+        <li class="phone-nav__item"><a href="#skills" class="phone-nav__link">Skills</a></li>
         <li class="phone-nav__item"><a href="#portfolio" class="phone-nav__link">Portfolio</a></li>
         <li class="phone-nav__item"><a href="#contact" class="phone-nav__link">Contact</a></li>
         <li class="phone-nav__item"><a href="#footer" class="phone-nav__link">Follow Me</a></li>
@@ -41,8 +42,9 @@
           <!-------LARGER SCREEN NAVIGATION------>
       <ul class="header__navigation--list">
         <li class="header__navigation--item"><a href="#about" class="header__navigation--link" tabindex="1">About</a></li>
-        <li class="header__navigation--item"><a href="#portfolio" class="header__navigation--link" tabindex="2">Portfolio</a></li>
-        <li class="header__navigation--item"><a href="#contact" class="header__navigation--link" tabindex="3">Contact</a></li>
+        <li class="header__navigation--item"><a href="#skills" class="header__navigation--link" tabindex="2">Skills</a></li>
+        <li class="header__navigation--item"><a href="#portfolio" class="header__navigation--link" tabindex="3">Portfolio</a></li>
+        <li class="header__navigation--item"><a href="#contact" class="header__navigation--link" tabindex="4">Contact</a></li>
       </ul>
     </nav>
     <div class="header__text-box">
@@ -58,81 +60,128 @@
         I am an Australian (born and bred) but I have a wanderust to see as much of the world as I can. I love the Northern California weather, 
         diversity and culture, and feel so blessed to reside here.  Coding, travelling and cooking are my three favourite ways to spend my time. 
         Else reading/learning about these three things, or fitting in some cycling or tennis or yoga into my days. </p>
-       <a class="btn btn--light" href="../about">More about me</a>
+       <a class="btn btn--dark" href="../about">More about me</a>
     </div>
   </section>
 
-  <section class="portfolio" id="portfolio">
-    <div class="portfolio__box">
-      <a href="https://pinkmoonlight.github.io/Nexter/" target="_blank">
-        <div class="portfolio__img portfolio__img--1"></div>
-      </a>
-      <div class="portfolio__text">
-        <h4 class="heading-4 portfolio__box--heading">Website Project</h4>
-        <p class="portfolio__description">
-          A landing page project using CSS Grid for a fictional Real Estate company with a great example of the power of CSS Grid to made a stunning 
-          photo gallery as well as a complex overall grid layout for the entire page.
-        </p>
+  <section class="skills__container" id="skills">
+    <h3 class="skills__main-heading">Skills</h3>
+    <div class="skills">
+      <div class="skill__box">
+        <div class="skill__imagebox">
+          <svg class="skill__imagebox--html-icon">
+            <use xlink:href="img/sprite.svg#icon-html-five"></use>
+          </svg>
+        </div>
+        <div class="skill__textbox">
+          <h4 class="heading-4 skill__heading">HTML & CSS</h4>
+          <p class="skill__description">
+            I use HTML5 and CSS3 to create responsive websites, using semantic tags for accessibility and seacrh engine optimization. 
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="portfolio__box">
-      <a href="https://pinkmoonlight.github.io/Natours/" target="_blank">
-        <div class="portfolio__img portfolio__img--2"></div>    
-      </a>
-      <div class="portfolio__text">
-        <h4 class="heading-4 portfolio__box--heading">Website Project</h4>
-        <p class="portfolio__description">
-          A single page project for a travel touring website, showcaing a variety of animations and transitions done with pure CSS. Layout done with floats and  
-          without any use of Flexbox or Grid.
-        </p>
+      <div class="skill__box">
+        <div class="skill__imagebox">
+          <img src="img/SVG/react.svg" alt="React.js icon" class="skill__imagebox--html-icon">
+          </img>
+        </div>
+        <div class="skill__textbox">
+          <h4 class="heading-4 skill__heading">JavaScript & React</h4>
+          <p class="skill__description">
+            I use JavaScript and React to create functional and intuitive interactions for the user.
+          </p>
+        </div>
       </div>
-    </div>  
-    <div class="portfolio__box">
-      <a href="https://pinkmoonlight.github.io/magic-8-ball/" target="_blank">
-          <div class="portfolio__img portfolio__img--3"></div>
-      </a>
-      <div class="portfolio__text">
-        <h4 class="heading-4 portfolio__box--heading">Javascript Project</h4>
-        <p class="portfolio__description">
-          A Javascript project to build a virtual version of the Magic 8 Ball game.  Complete with pop up input field for YES/NO questions, 21 possible answers 
-          and some small animation. 
-        </p>
-      </div>
-    </div>
-    <div class="portfolio__box">
-      <a href="https://pinkmoonlight.github.io/budget-webapp/" target="_blank">
-        <div class="portfolio__img portfolio__img--4"></div>
-      </a>
-      <div class="portfolio__text">
-        <h4 class="heading-4 portfolio__box--heading">Javascript Project</h4>
-        <p class="portfolio__description">
-          A Javascript project for an interactive monthly budget webapp to keep track of income and expenses. Creates a list for each, and tallies up to display if 
-          there is a budget surplus or deficit. Saves the input values to lcoal storage for future reference.  
-        </p>
-      </div>
-    </div>    
-    <div class="portfolio__box">
-      <a href="https://pinkmoonlight.github.io/Super-Sticky-Notes/" target="_blank">
-          <div class="portfolio__img portfolio__img--5"></div>
-      </a>
-      <div class="portfolio__text">
-        <h4 class="heading-4 portfolio__box--heading">React Project</h4>
-        <p class="portfolio__description">
-           A sticky notes UI built with ReactJS with functionality for creating new notes, editing each note, searching through the notes for keywords, 
-          and deleting a note.  Lifecycle methods save the notes to local storage so the lists can be accessed locally after closing the app window.
-      </div>
-    </div>
-    <div class="portfolio__box">
-        <a href="https://pinkmoonlight.github.io/Name-Tag-Generator/" target="_blank">
-            <div class="portfolio__img portfolio__img--6"></div>
+      <div class="skill__box">
+        <div class="skill__imagebox">
+          <svg class="skill__imagebox--html-icon">
+            <use xlink:href="img/sprite.svg#icon-github"></use>
+          </svg>
+        </div>
+        <div class="skill__textbox">
+          <h4 class="heading-4 skill__heading">Git & GitHub</h4>
+          <p class="skill__description">
+            I am experinced using Git and Github for version control, working with others, installing node packages and more. 
+          </p>
+        </div>
+      </div>  
+    </div> 
+  </section>
+
+  <section class="portfolio__container" id="portfolio">
+    <h3 class="portfolio__main-heading">Portfolio</h3>
+    <div class="portfolio">
+      <div class="portfolio__box">
+        <a href="https://pinkmoonlight.github.io/Nexter/" target="_blank">
+          <div class="portfolio__img portfolio__img--1"></div>
         </a>
-      <div class="portfolio__text">
-        <h4 class="heading-4 portfolio__box--heading">React Project</h4>
-        <p class="portfolio__description">
-            A Name Tag Generator UI built with ReactJS.  It has an input field to generate a new name tag based on the name 
-            submitted. There is functionality to delete a name tag, and the tags data is saved to local storage for future reference locally.
-        </p> 
+        <div class="portfolio__text">
+          <h4 class="heading-4 portfolio__box--heading">Website Project</h4>
+          <p class="portfolio__description">
+            A landing page project using CSS Grid for a fictional Real Estate company with a great example of the power of CSS Grid to made a stunning 
+            photo gallery as well as a complex overall grid layout for the entire page.
+          </p>
+        </div>
       </div>
+      <div class="portfolio__box">
+        <a href="https://pinkmoonlight.github.io/Natours/" target="_blank">
+          <div class="portfolio__img portfolio__img--2"></div>    
+        </a>
+        <div class="portfolio__text">
+          <h4 class="heading-4 portfolio__box--heading">Website Project</h4>
+          <p class="portfolio__description">
+            A single page project for a travel touring website, showcaing a variety of animations and transitions done with pure CSS. Layout done with floats and  
+            without any use of Flexbox or Grid.
+          </p>
+        </div>
+      </div>  
+      <div class="portfolio__box">
+        <a href="https://pinkmoonlight.github.io/magic-8-ball/" target="_blank">
+            <div class="portfolio__img portfolio__img--3"></div>
+        </a>
+        <div class="portfolio__text">
+          <h4 class="heading-4 portfolio__box--heading">Javascript Project</h4>
+          <p class="portfolio__description">
+            A Javascript project to build a virtual version of the Magic 8 Ball game.  Complete with pop up input field for YES/NO questions, 21 possible answers 
+            and some small animation. 
+          </p>
+        </div>
+      </div>
+      <div class="portfolio__box">
+        <a href="https://pinkmoonlight.github.io/budget-webapp/" target="_blank">
+          <div class="portfolio__img portfolio__img--4"></div>
+        </a>
+        <div class="portfolio__text">
+          <h4 class="heading-4 portfolio__box--heading">Javascript Project</h4>
+          <p class="portfolio__description">
+            A Javascript project for an interactive monthly budget webapp to keep track of income and expenses. Creates a list for each, and tallies up to display if 
+            there is a budget surplus or deficit. Saves the input values to lcoal storage for future reference.  
+          </p>
+        </div>
+      </div>    
+      <div class="portfolio__box">
+        <a href="https://pinkmoonlight.github.io/Super-Sticky-Notes/" target="_blank">
+            <div class="portfolio__img portfolio__img--5"></div>
+        </a>
+        <div class="portfolio__text">
+          <h4 class="heading-4 portfolio__box--heading">React Project</h4>
+          <p class="portfolio__description">
+            A sticky notes UI built with ReactJS with functionality for creating new notes, editing each note, searching through the notes for keywords, 
+            and deleting a note.  Lifecycle methods save the notes to local storage so the lists can be accessed locally after closing the app window.
+        </div>
+      </div>
+      <div class="portfolio__box">
+          <a href="https://pinkmoonlight.github.io/Name-Tag-Generator/" target="_blank">
+              <div class="portfolio__img portfolio__img--6"></div>
+          </a>
+        <div class="portfolio__text">
+          <h4 class="heading-4 portfolio__box--heading">React Project</h4>
+          <p class="portfolio__description">
+              A Name Tag Generator UI built with ReactJS.  It has an input field to generate a new name tag based on the name 
+              submitted. There is functionality to delete a name tag, and the tags data is saved to local storage for future reference locally.
+          </p> 
+        </div>
+    </div>
    </div>
   </section>
   

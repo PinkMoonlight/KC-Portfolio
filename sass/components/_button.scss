@@ -23,13 +23,34 @@
     &:active,
     &:focus {
         color: $color-neutral;
-        background-color:  rgb(31, 32, 43);
+        background-color: $color-primary-light;
         outline: none;
+        
+        @include respond(phone) {
+            color: $color-neutral;
+        }   background-color: $color-dark-theme ;
     }
     
     &--light {
         background-color: $color-neutral;
         color: #353640;
         align-self: flex-end;
+    }
+
+    &--primary {
+        background-color: $color-primary-light;
+        color: $color-neutral;
+        align-self: flex-end;
+    }
+
+    &--dark {
+        background-color: $color-dark-theme;
+        color: $color-neutral;
+        align-self: flex-end;
+
+        @include respond(phone) {
+            background-color: $color-neutral;
+            color: $color-dark-theme;
+        }   
     }
 }

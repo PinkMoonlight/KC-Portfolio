@@ -1,5 +1,5 @@
 .about {
-    background-color: $color-neutral;
+    background-color: $color-dark-theme; //$color-neutral;
     grid-column: full-start / full-end;
     grid-row: 2 / 3;
 
@@ -21,7 +21,7 @@
     }
 
     &__content {
-        background-color: rgba(242, 116, 93, 0.93);
+        background-color: rgba(248, 255, 229, 0.93);// rgba(242, 116, 93, 0.93);
         padding: 4rem 3rem;
 
         grid-row: 3 / 7;
@@ -31,6 +31,16 @@
         display: flex;
         flex-direction: column;
 
+        &--heading {
+            color: $color-dark-theme;
+
+
+            @include respond(phone) { // width < 600?
+                color: $color-neutral;
+            }
+           
+        }
+
         @include respond(tab-port) { // width < 900?
             grid-column: 2 / 8;
         }
@@ -38,14 +48,20 @@
         @include respond(phone) { // width < 600?
             grid-column: 2 / 10;
             margin-left: 0;
+            background-color: rgba(242, 116, 93, 0.93);
+
         }
 
 
         &--text {
-            color: $color-neutral;
+            color: $color-dark-theme; //$color-neutral;
             font-size: 1.5rem;
 
-            @include respond(sm-phone) { // width < 400?
+            @include respond(phone) {
+                color: $color-neutral;
+            }
+
+            @include respond(sm-phone) { 
                 font-size: 1.7rem;
             }
         }
