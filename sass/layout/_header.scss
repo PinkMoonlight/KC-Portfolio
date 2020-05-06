@@ -50,13 +50,13 @@
         &--link:visited {
             text-decoration: none;
             color: inherit;
+
         }
 
         &--link:hover,
         &--link:focus {
             color: $color-primary-light;
             outline: none;
-            transform: translateY(-3px);
         }
     }
 
@@ -76,12 +76,14 @@
 }
 
 .heading-primary--main {
+    animation-delay: 0.5s;
     animation: 1.2s slideUp linear forwards;
     animation-timing-function: ease-out;
     transform: translateY(8rem);
 }
 
 .heading-primary--sub {
+    animation-delay: 0.5s;
     animation: 2s slideUp linear forwards;
     animation-timing-function: ease-out;
     transform: translateY(10rem);

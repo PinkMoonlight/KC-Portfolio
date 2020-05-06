@@ -109,46 +109,46 @@ body {
 
 .btn, .btn:link, .btn:visited {
   text-decoration: none;
-  font-size: 1.4rem;
-  border-radius: 1rem;
+  color: #1f202b;
+  font-size: 1.6rem;
   padding: 1.1rem 2rem;
   border: none;
   transition: all .2s;
   cursor: pointer;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500; }
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  align-self: flex-end; }
+  @media (max-width: 37.5em) {
+    .btn, .btn:link, .btn:visited {
+      color: #f8ffe5; } }
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba(40, 56, 69, 0.2); }
+  background-color: transparent; }
 
 .btn:active, .btn:focus {
-  color: #f8ffe5;
-  background-color: #f2745d;
-  outline: none;
-  background-color: #1f202b; }
+  color: #f2745d;
+  outline: none; }
   @media (max-width: 37.5em) {
     .btn:active, .btn:focus {
-      color: #f8ffe5; } }
-
-.btn--light {
-  background-color: #f8ffe5;
-  color: #353640;
-  align-self: flex-end; }
-
-.btn--primary {
-  background-color: #f2745d;
-  color: #f8ffe5;
-  align-self: flex-end; }
-
-.btn--dark {
-  background-color: #1f202b;
-  color: #f8ffe5;
-  align-self: flex-end; }
-  @media (max-width: 37.5em) {
-    .btn--dark {
-      background-color: #f8ffe5;
       color: #1f202b; } }
+
+.arrow-right-icon {
+  fill: #1f202b;
+  height: 2rem;
+  width: 2rem;
+  vertical-align: middle;
+  margin-left: 0.8rem;
+  padding-bottom: 2px; }
+  .arrow-right-icon:active, .arrow-right-icon:focus {
+    fill: #f2745d;
+    box-shadow: 0 1rem 2rem rgba(40, 56, 69, 0.2); }
+    @media (max-width: 37.5em) {
+      .arrow-right-icon:active, .arrow-right-icon:focus {
+        fill: #1f202b; } }
+  @media (max-width: 37.5em) {
+    .arrow-right-icon {
+      fill: #f8ffe5; } }
 
 .navigation {
   align-self: flex-start;
@@ -335,8 +335,7 @@ body {
       color: inherit; }
     .header__navigation--link:hover, .header__navigation--link:focus {
       color: #f2745d;
-      outline: none;
-      transform: translateY(-3px); }
+      outline: none; }
   .header__text-box {
     margin: 5rem;
     justify-self: flex-end; }
@@ -349,11 +348,13 @@ body {
   text-align: right; }
 
 .heading-primary--main {
+  animation-delay: 0.5s;
   animation: 1.2s slideUp linear forwards;
   animation-timing-function: ease-out;
   transform: translateY(8rem); }
 
 .heading-primary--sub {
+  animation-delay: 0.5s;
   animation: 2s slideUp linear forwards;
   animation-timing-function: ease-out;
   transform: translateY(10rem); }

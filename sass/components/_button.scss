@@ -4,53 +4,59 @@
     &:link,
     &:visited {
         text-decoration: none;
-        //text-transform: uppercase;
-        font-size: 1.4rem;
-        border-radius: 1rem;
+        color: $color-dark-theme;
+        font-size: 1.6rem;
         padding: 1.1rem 2rem;
         border: none;
         transition: all .2s; 
         cursor: pointer;
-        font-family: $font-main; 
-        font-weight: 500; 
+        font-family: $font-headings; //$font-main; 
+        font-weight: 500;
+        align-self: flex-end;
+
+        @include respond(phone) {
+            color: $color-neutral;
+        }  
+ 
      }
 
     &:hover {
         transform: translateY(-3px);
-        box-shadow: 0 1rem 2rem rgba($color-dark-alt,.2);
+        background-color: transparent;
     }
 
     &:active,
     &:focus {
-        color: $color-neutral;
-        background-color: $color-primary-light;
+        color: $color-primary-light;
         outline: none;
         
         @include respond(phone) {
-            color: $color-neutral;
-        }   background-color: $color-dark-theme ;
-    }
-    
-    &--light {
-        background-color: $color-neutral;
-        color: #353640;
-        align-self: flex-end;
-    }
-
-    &--primary {
-        background-color: $color-primary-light;
-        color: $color-neutral;
-        align-self: flex-end;
-    }
-
-    &--dark {
-        background-color: $color-dark-theme;
-        color: $color-neutral;
-        align-self: flex-end;
-
-        @include respond(phone) {
-            background-color: $color-neutral;
             color: $color-dark-theme;
+        } 
+    } 
+}
+.arrow-right-icon {
+    fill: $color-dark-theme;
+    height: 2rem;
+    width: 2rem;
+    vertical-align: middle;
+    margin-left: 0.8rem;
+   padding-bottom: 2px;
+
+    &:active,
+    &:focus {
+        fill: $color-primary-light;
+        box-shadow: 0 1rem 2rem rgba($color-dark-alt,.2);
+
+        //background-color: $color-primary-light;
+        //outline: none;
+        
+        @include respond(phone) {
+            fill: $color-dark-theme;
         }   
     }
+
+    @include respond(phone) {
+        fill: $color-neutral;
+    }  
 }
