@@ -32,11 +32,21 @@
         grid-column: 5 / 10;
         margin-right: 1.5rem;
 
-        &--text {
+        &--text,
+        &--email {
             font-size: 1.5rem;
+            color: $color-neutral;
+            text-decoration: none;
+            font-style: normal;
 
             @include respond(sm-phone) { // width < 400?
                 font-size: 1.7rem;
+            }
+        }
+
+        &--email {
+            &:hover {
+                color: $color-primary;
             }
         }
 

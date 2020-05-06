@@ -1,5 +1,5 @@
 .about {
-    background-color: $color-dark-theme; //$color-neutral;
+    background-color: $color-dark-theme; 
     grid-column: full-start / full-end;
     grid-row: 2 / 3;
 
@@ -9,13 +9,17 @@
 
 
     &__background {
-        background-image: url(../img/about-img.jpg);
+        background-image: url(../img/about-img-small.jpg);
         background-size: cover;
         background-position: right;
         grid-row: 1 / 9;
         grid-column: 3 / 11;
 
-        @include respond(phone) { // width < 600?
+        @media (min-resolution: 192dpi) and (min-width: 600px) {
+            background-image: url(../img/about-img.jpg);
+        }
+
+        @include respond(phone) { 
             grid-column: 1 / 11;
         }
     }
@@ -35,17 +39,17 @@
             color: $color-dark-theme;
 
 
-            @include respond(phone) { // width < 600?
+            @include respond(phone) { 
                 color: $color-neutral;
             }
            
         }
 
-        @include respond(tab-port) { // width < 900?
+        @include respond(tab-port) { 
             grid-column: 2 / 8;
         }
 
-        @include respond(phone) { // width < 600?
+        @include respond(phone) { 
             grid-column: 2 / 10;
             margin-left: 0;
             background-color: rgba(242, 116, 93, 0.93);

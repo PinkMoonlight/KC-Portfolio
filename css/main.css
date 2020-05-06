@@ -297,7 +297,7 @@ body {
 
 .header {
   display: block;
-  background-image: linear-gradient(to right bottom, rgba(248, 255, 229, 0.3), rgba(242, 116, 93, 0.9)), url(../img/hero.jpeg);
+  background-image: linear-gradient(to right bottom, rgba(248, 255, 229, 0.3), rgba(242, 116, 93, 0.9)), url(../img/hero-small.jpg);
   background-size: cover;
   background-color: #f2745d;
   color: #f8ffe5;
@@ -307,6 +307,9 @@ body {
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between; }
+  @media (min-resolution: 192dpi) and (min-width: 600px) {
+    .header {
+      background-image: linear-gradient(to right bottom, rgba(248, 255, 229, 0.3), rgba(242, 116, 93, 0.9)), url(../img/hero-large.jpeg); } }
   @media (max-width: 37.5em) {
     .header {
       background-position: center; } }
@@ -363,21 +366,13 @@ body {
   0% {
     opacity: 0;
     transform: translateY(40rem); }
+  40% {
+    opacity: 0; }
   80% {
     transform: translateY(0.8rem); }
   100% {
     opacity: 1;
     transform: translateY(0); } }
-
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem); }
-  80% {
-    transform: translateX(0.8rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
 
 .container__about {
   display: grid;
@@ -470,11 +465,14 @@ body {
   grid-template-rows: repeat(8, 1fr);
   grid-template-columns: repeat(10, 1fr); }
   .about__background {
-    background-image: url(../img/about-img.jpg);
+    background-image: url(../img/about-img-small.jpg);
     background-size: cover;
     background-position: right;
     grid-row: 1 / 9;
     grid-column: 3 / 11; }
+    @media (min-resolution: 192dpi) and (min-width: 600px) {
+      .about__background {
+        background-image: url(../img/about-img.jpg); } }
     @media (max-width: 37.5em) {
       .about__background {
         grid-column: 1 / 11; } }
@@ -536,11 +534,16 @@ body {
     grid-row: 3 / 7;
     grid-column: 5 / 10;
     margin-right: 1.5rem; }
-    .contact__content--text {
-      font-size: 1.5rem; }
+    .contact__content--text, .contact__content--email {
+      font-size: 1.5rem;
+      color: #f8ffe5;
+      text-decoration: none;
+      font-style: normal; }
       @media (max-width: 25em) {
-        .contact__content--text {
+        .contact__content--text, .contact__content--email {
           font-size: 1.7rem; } }
+    .contact__content--email:hover {
+      color: #f15946; }
     @media (max-width: 56.25em) {
       .contact__content {
         grid-column: 4 / 10; } }
