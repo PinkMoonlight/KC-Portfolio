@@ -14,6 +14,7 @@
     @extend %heading;
     font-size: 6rem;
     line-height: 1;
+    text-align: right;
 }
 
 .heading-2 {
@@ -25,6 +26,7 @@
 .heading-2-5 {
     @extend %heading;
     font-size: 3.5rem;
+    text-align: right;
     color: $color-primary-light;
 }
 

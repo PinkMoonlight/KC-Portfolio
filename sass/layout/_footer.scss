@@ -85,4 +85,26 @@
        grid-column: 2 / 3;
         } 
     }
+    &__home-link:link,
+    &__top-link:link {
+        transform: translateY(2px);
+    }
+
+    &__name-link:link,
+    &__name-link:visited {
+        color: $color-neutral;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: inline-block;
+        transition: all .2s;
+    }
+
+    &__name-link:hover,
+    &__name-link:active {
+        color: $color-neutral;
+        padding: 0 3px;
+        background-color: rgba(242, 116, 93, 0.8);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+        transform: rotate(5deg) scale(1.3);
+    }
 }
