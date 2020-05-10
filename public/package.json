@@ -1,0 +1,35 @@
+{
+  "name": "katecherie-portfolio",
+  "version": "1.0.0",
+  "description": "portfolio site",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "watch:sass": "node-sass ../sass/main.scss css/main.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass ../sass/main.scss css/main.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/main.comp.css -o css/main.prefix.css",
+    "compress:css": "node-sass css/main.prefix.css css/main.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PinkMoonlight/KC-Portfolio.git"
+  },
+  "author": "Kate Fisher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PinkMoonlight/KC-Portfolio/issues"
+  },
+  "homepage": "https://github.com/PinkMoonlight/KC-Portfolio#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "node-sass": "^4.13.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.1",
+    "prettier": "^2.0.5"
+  }
+}
