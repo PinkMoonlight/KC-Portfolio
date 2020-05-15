@@ -24,6 +24,9 @@
             url(../img/hero-large.jpeg);
     }
 
+    @include respond(tab-land) {
+        padding-bottom: 3rem;
+    }
     
     @include respond(phone) {
         background-position: center; 

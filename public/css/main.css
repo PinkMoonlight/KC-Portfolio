@@ -51,6 +51,9 @@ body {
   display: grid;
   grid-template-rows: 100vh repeat(3, min-content) 100vh min-content;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  @media (max-width: 37.5em) {
+    .container {
+      grid-template-rows: 98vh repeat(3, min-content) 100vh min-content; } }
   @media only screen and (max-width: 20em) {
     .container {
       grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end]; } }
@@ -201,11 +204,9 @@ body {
     border-radius: 2px;
     background-image: linear-gradient(to bottom right, rgba(248, 255, 229, 0.85), rgba(242, 116, 93, 0.98)); }
   .phone-nav__link {
-    padding: 1.5rem 11rem; }
-    .phone-nav__link:last-child {
-      padding: 1.5rem 6rem; }
+    padding: 1.5rem 6rem; }
   .phone-nav__link:link, .phone-nav__link:visited {
-    display: inline-block;
+    display: block;
     width: inherit;
     font-size: 3rem;
     font-weight: 500;
@@ -310,6 +311,9 @@ body {
   @media (min-resolution: 192dpi) and (min-width: 600px) {
     .header {
       background-image: linear-gradient(to right bottom, rgba(248, 255, 229, 0.3), rgba(242, 116, 93, 0.9)), url(../img/hero-large.jpeg); } }
+  @media (max-width: 75em) {
+    .header {
+      padding-bottom: 3rem; } }
   @media (max-width: 37.5em) {
     .header {
       background-position: center; } }

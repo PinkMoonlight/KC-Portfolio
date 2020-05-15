@@ -67,15 +67,12 @@
     }
 
     &__link {
-        padding: 1.5rem 11rem;
-
-        &:last-child {
-            padding: 1.5rem 6rem;
-        }
+        padding: 1.5rem 6rem;
     }
+    
     &__link:link,
     &__link:visited {
-        display: inline-block;
+        display: block;
         //padding: 1.5rem 10;
         width: inherit;
         font-size: 3rem;
