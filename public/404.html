@@ -195,6 +195,14 @@
     padding: 2em auto;
     text-align: center;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .errors-list-items {
+    text-align: left; 
+
   }
 
   .errors {
@@ -252,7 +260,7 @@
         </div>
         <div class="error-list">
             <p class="errors">Here’s a list of possible reasons for the 404 error:</p>
-            <ul>
+            <ul class = errors-list-items>
               <li>Mistyped URL</li>
               <li>Copy-and-paste error</li>
               <li>Broken link</li>
