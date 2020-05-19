@@ -172,13 +172,6 @@
         list-style: none;
         display: grid;
         grid-template-columns: repeat(4, 5rem);
-        //grid-gap: 2rem;
-
-            @include respond(tab-land) {
-                //position: absolute;
-                //top: 2.5rem;
-                //right: 2.5rem;
-            }
 
             @include respond(phone) {
                 padding-left: 0;
@@ -203,7 +196,7 @@
         grid-column: 1 /11;
         grid-row: 1 / 7;
 
-        @include respond(tab-port) { // width < 900?
+        @include respond(tab-port) {
              grid-column: 1 / 11;   
              background-position: center;
         }
@@ -224,7 +217,7 @@
     &__heading {
         padding: 3rem 3rem 0 3rem;
 
-        @include respond(phone) { // width < 600?
+        @include respond(phone) { 
             border-top-left-radius: 4px;
             border-top-right-radius: 4px;
         }
@@ -266,11 +259,11 @@
 
             grid-column: 4 / 9;
 
-            @include respond(tab-port) { // width < 600?
+            @include respond(tab-port) { 
                 grid-column: 3 / 9;
             }
 
-            @include respond(phone) { // width < 600?
+            @include respond(phone) { 
                 grid-column: 1 / 9;
                 border-radius: 4px;
             }
