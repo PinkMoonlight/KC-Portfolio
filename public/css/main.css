@@ -110,6 +110,9 @@ body {
 .mb-hg {
   margin-bottom: 8rem; }
 
+.ml-hg {
+  margin-left: 25rem; }
+
 .btn, .btn:link, .btn:visited {
   text-decoration: none;
   color: #1f202b;
@@ -161,7 +164,8 @@ body {
   visibility: hidden; }
   @media (max-width: 37.5em) {
     .navigation {
-      visibility: visible; } }
+      visibility: visible;
+      order: 1; } }
   .navigation__icon {
     height: 4rem;
     width: 4rem;
@@ -321,13 +325,15 @@ body {
     .header {
       background-position: left; } }
   .header__navigation {
+    width: 100%;
     font-size: 3rem;
     padding: 2rem 5rem 2rem 2rem;
+    align-self: flex-start;
     display: flex;
     justify-content: space-between; }
     .header__navigation--list {
+      order: 2;
       list-style-type: none;
-      margin-left: 25rem;
       display: flex; }
       @media (max-width: 37.5em) {
         .header__navigation--list {
@@ -343,6 +349,34 @@ body {
     .header__navigation--link:hover, .header__navigation--link:focus {
       color: #f2745d;
       outline: none; }
+  .header__social-media--list {
+    order: 1;
+    margin-left: 2rem;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem; }
+    @media (max-width: 37.5em) {
+      .header__social-media--list {
+        order: 2;
+        position: absolute;
+        margin-left: 0;
+        top: 2.5rem;
+        right: 2.5rem; } }
+  .header__social-media--link:link, .header__social-media--link:visited {
+    text-decoration: none;
+    color: inherit; }
+  .header__social-media--link:hover, .header__social-media--link:focus {
+    color: #f2745d;
+    outline: none; }
+  .header__instagram-icon, .header__github-icon, .header__linkedin-icon, .header__twitter-icon {
+    height: 2rem;
+    width: 2rem;
+    fill: #f8ffe5; }
+    @media only screen and (max-width: 20em) {
+      .header__instagram-icon, .header__github-icon, .header__linkedin-icon, .header__twitter-icon {
+        height: 2rem;
+        width: 2rem; } }
   .header__text-box {
     margin: 5rem;
     justify-self: flex-end; }
@@ -528,7 +562,6 @@ body {
   color: #f8ffe5;
   grid-column: full-start / full-end;
   grid-row: 1 / 2;
-  padding-bottom: 5rem;
   margin-left: -22rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -536,6 +569,17 @@ body {
   .header__about--title {
     grid-row: 1 / 2;
     grid-column: 2 / 5; }
+  .header__about__social-media--list {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+    padding-bottom: 2rem;
+    padding-left: 2.5rem;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 5rem); }
+    @media (max-width: 37.5em) {
+      .header__about__social-media--list {
+        padding-left: 0; } }
 
 .bio {
   background-color: #f8ffe5;

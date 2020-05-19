@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Kate Cherie | Portfolio</title>
-  <meta name="description" content="Portfolio website of Web developer Kate Cherie Fisher">
+  <meta name="description" content="Portfolio website of Web developer Kate Fisher">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="manifest" href="site.webmanifest">
@@ -46,6 +46,36 @@
         <li class="header__navigation--item"><a href="#portfolio" class="header__navigation--link" tabindex="3">Portfolio</a></li>
         <li class="header__navigation--item"><a href="#contact" class="header__navigation--link" tabindex="4">Contact</a></li>
       </ul>
+      <ul class="header__social-media--list">
+        <li class="header__social-media--item">
+          <a href="https://twitter.com/PinkMoonlight3" target="_blank" class="header__social-media--link">
+           <svg class="header__twitter-icon">
+            <use xlink:href="../img/sprite.svg#icon-twitter1"></use>
+          </svg>
+          </a>
+        </li>
+        <li class="header__social-media--item">
+          <a href="https://www.linkedin.com/in/kate-cherie/" target="_blank" class="header__social-media--link">
+            <svg class="header__linkedin-icon">
+              <use xlink:href="../img/sprite.svg#icon-linkedin"></use>
+            </svg>
+           </a>
+        </li>
+        <li class="header__social-media--item">
+          <a href="https://github.com/PinkMoonlight" target="_blank" class="header__social-media--link">
+            <svg class="header__github-icon">
+              <use xlink:href="../img/sprite.svg#icon-github"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="header__social-media--item">
+          <a href="https://www.instagram.com/kate_traveltrustlife/" target="_blank" class="header__social-media--link">
+            <svg class="header__instagram-icon">
+              <use xlink:href="../img/sprite.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
     </nav>
     <div class="header__text-box">
       <h1 class="heading-primary--main heading-1 mb-sm">Kate Cherie</h1>
@@ -57,10 +87,12 @@
     <div class="about__background"></div>
     <div class="about__content">
       <h3 class="about__content--heading heading-3 mb-md">About Me</h3>
-      <p class="about__content--text mb-sm">My name is Kate. I am a Web Developer and I live most of the year in Los Gatos, California. 
-        I am an Australian (born and bred) but I have a wanderlust to see as much of the world as I can. I love the Northern California weather, 
-        diversity and culture, and feel so blessed to reside here.  Coding, travelling and cooking are my three favourite ways of spending time. Otherwise 
-        reading or learning about these three things, fitting in some cycling, tennis or yoga into my days. </p>
+      <p class="about__content--text mb-sm">Hi, I’m Kate! I am a Web Developer living most of the year in Los Gatos, California. I am an Australian, 
+        born and bred, but I try to travel the world as much as I can to satisfy my wanderlust. I love Northern California weather, 
+        the diversity and culture; I really do feel blessed to reside here. Coding, travelling, and cooking are my three favourite 
+        ways of spending time. In the time I get away from them, I enjoy reading about these topics, fitting in some cycling, tennis, 
+        or yoga, and perhaps a bit of Netflix into the remainder.  
+      </p>
        <a class="btn" href="../about">More about me<svg class="arrow-right-icon">
          <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
        </svg></a>
@@ -104,7 +136,7 @@
         <div class="skill__textbox">
           <h4 class="heading-4 skill__heading">Git & GitHub</h4>
           <p class="skill__description">
-            I am experinced using Git and Github for version control, working with others, installing node packages and more. 
+            I am experinced using the Command-line interface with Git and Github for version control, installing node packages and more. 
           </p>
         </div>
       </div>  
@@ -121,7 +153,7 @@
         <div class="portfolio__text">
           <h4 class="heading-4 portfolio__box--heading">Website Project</h4>
           <p class="portfolio__description">
-            A landing page project using CSS Grid for a fictional Real Estate company with a great example of the power of CSS Grid to make a stunning 
+            A landing page project using CSS Grid for a fictional Real Estate company with a great example of the power of CSS Grid to make a stunning, responsive 
             photo gallery as well as a complex overall grid layout for the entire page.
           </p>
         </div>
@@ -195,9 +227,18 @@
       <h4 class="heading-4 mb-mini">Location</h4>
       <p class="contact__content--text mb-lg">Los Gatos, California</p>
       <h4 class="heading-4 mb-mini">Email</h4>
-      <address>
+      <address class="mb-lg">
         <a class="contact__content--email" href="mailto: hello@katecherie.com" target="_blank">hello@katecherie.com</a>
       </address>
+
+      <!--------MESSAGE FORM ---------
+      <h4 class="heading-4 mb-mini">Message Me</h4>
+      <form class="contact__form">
+        <label for="message">
+          <textarea type="text" name="message" id="message" placeholder="Send me a message!" style="width: 300px; height: 130px;"></textarea>
+        </label><br>
+        <input type="submit" value="Send Message">
+      </form>      ----->
     </div>
   </section>
   <!--------------FOOTER--------->

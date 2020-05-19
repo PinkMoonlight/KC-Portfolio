@@ -36,14 +36,17 @@
     }
     
     &__navigation {
+        width: 100%;
         font-size: 3rem;
         padding: 2rem 5rem 2rem 2rem;
+        align-self: flex-start;
+
         display: flex;
         justify-content: space-between;
 
         &--list {
+            order: 2;
             list-style-type: none;
-            margin-left: 25rem;
             display: flex;    
 
             @include respond(phone) {
@@ -74,8 +77,57 @@
         }
     }
 
+    &__social-media {
+        
+        &--list {
+            order: 1;
+            margin-left: 2rem;
+            //justify-self: flex-end;
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 2rem;
+
+            @include respond(phone) {
+                order: 2;
+                position: absolute;
+                margin-left: 0;
+                top: 2.5rem;
+                right: 2.5rem;
+            }
+
+      }
+
+        &--link:link,
+        &--link:visited {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        &--link:hover,
+        &--link:focus {
+            color: $color-primary-light;
+            outline: none;
+        } 
+    }
+
+    &__instagram-icon,
+    &__github-icon,
+    &__linkedin-icon,
+    &__twitter-icon {
+        height: 2rem;
+        width: 2rem;
+        fill: $color-neutral;
+
+        @media only screen and (max-width: 20em) {
+            height: 2rem;
+            width: 2rem;    
+        } 
+    }
+
     &__text-box {
         margin: 5rem;
+        //margin-bottom: 4rem;
         justify-self: flex-end;
 
         @include respond(sm-phone) {
