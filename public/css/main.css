@@ -703,7 +703,12 @@ body {
   grid-row: 5 / 6;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(8, 1fr); }
+  grid-template-rows: repeat(8, 1fr);
+  /*
+    &__form {
+        
+    }
+*/ }
   .contact__background {
     background-image: url(../img/contact-img.jpg);
     background-size: cover;
