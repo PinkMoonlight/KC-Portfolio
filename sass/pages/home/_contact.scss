@@ -1,68 +1,76 @@
 .contact {
-    background-color: $color-neutral;
-    grid-column: full-start / full-end;
-    grid-row: 5 / 6;
+  background-color: $color-neutral;
+  grid-column: full-start / full-end;
+  grid-row: 5 / 6;
 
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(8, 1fr);
 
-    &__background {
-        background-image: url(../img/contact-img.jpg);
-        background-size: cover;
+  &__background {
+    background-image: url(../img/contact-img.jpg);
+    background-size: cover;
 
-        grid-column: 1 / 9;
-        grid-row: 1 / 9;
+    grid-column: 1 / 9;
+    grid-row: 1 / 9;
 
-        @include respond(phone) { // width < 600?
-            grid-column: 1 / 11;
-        }
+    @include respond(phone) {
+      // width < 600?
+      grid-column: 1 / 11;
+    }
+  }
+
+  &__content {
+    background-color: rgba(31, 32, 43, 0.98);
+    color: $color-neutral;
+    padding: 3rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    grid-row: 3 / 7;
+    grid-column: 5 / 10;
+    margin-right: 1.5rem;
+
+    &--text,
+    &--email {
+      font-size: 1.5rem;
+      color: $color-neutral;
+      text-decoration: none;
+      font-style: normal;
+
+      @include respond(sm-phone) {
+        // width < 400?
+        font-size: 1.7rem;
+      }
     }
 
-    &__content {
-        background-color: rgba(31, 32, 43, 0.98);
-        color: $color-neutral;
-        padding: 3rem 4rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-end;
-
-        grid-row: 3 / 7;
-        grid-column: 5 / 10;
-        margin-right: 1.5rem;
-
-        &--text,
-        &--email {
-            font-size: 1.5rem;
-            color: $color-neutral;
-            text-decoration: none;
-            font-style: normal;
-
-            @include respond(sm-phone) { // width < 400?
-                font-size: 1.7rem;
-            }
+    &--email {
+      &:hover {
+        color: $color-primary;
+      }
+      &:focus {
+        outline: {
+          color: $color-primary-light;
         }
-
-        &--email {
-            &:hover {
-                color: $color-primary;
-            }
-        }
-
-        @include respond(tab-port) { // width < 900?
-            grid-column: 4 / 10;
-        }
-
-        @include respond(phone) { // width < 600?
-            grid-column: 2 / 10;
-            margin-left: 0;
-        }
+      }
     }
-    /*
+
+    @include respond(tab-port) {
+      // width < 900?
+      grid-column: 4 / 10;
+    }
+
+    @include respond(phone) {
+      // width < 600?
+      grid-column: 2 / 10;
+      margin-left: 0;
+    }
+  }
+  /*
     &__form {
         
     }
 */
 }
-

@@ -1,62 +1,62 @@
 .btn {
-    
-    &,
-    &:link,
-    &:visited {
-        text-decoration: none;
-        color: $color-dark-theme;
-        font-size: 1.6rem;
-        padding: 1.1rem 2rem;
-        border: none;
-        transition: all .2s; 
-        cursor: pointer;
-        font-family: $font-headings; //$font-main; 
-        font-weight: 500;
-        align-self: flex-end;
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+    color: $color-dark-theme;
+    font-size: 1.6rem;
+    padding: 1.1rem 2rem;
+    border: none;
+    transition: all 0.2s;
+    cursor: pointer;
+    font-family: $font-headings; //$font-main;
+    font-weight: 500;
+    align-self: flex-end;
 
-        @include respond(phone) {
-            color: $color-neutral;
-        }  
- 
-     }
-
-    &:hover {
-        transform: translateY(-3px);
-        background-color: transparent;
+    @include respond(phone) {
+      color: $color-neutral;
     }
+  }
 
-    &:active,
-    &:focus {
-        color: $color-primary-light;
-        outline: none;
-        
-        @include respond(phone) {
-            color: $color-dark-theme;
-        } 
-    } 
-}
-.arrow-right-icon {
-    fill: $color-dark-theme;
-    height: 2rem;
-    width: 2rem;
-    vertical-align: middle;
-    margin-left: 0.8rem;
-   padding-bottom: 2px;
+  &:hover {
+    transform: translateY(-3px);
+    background-color: transparent;
+  }
 
-    &:active,
-    &:focus {
-        fill: $color-primary-light;
-        box-shadow: 0 1rem 2rem rgba($color-dark-alt,.2);
-
-        //background-color: $color-primary-light;
-        //outline: none;
-        
-        @include respond(phone) {
-            fill: $color-dark-theme;
-        }   
+  &:active,
+  &:focus {
+    //color: $color-primary-light;
+    outline: {
+      color: $color-primary-light;
     }
 
     @include respond(phone) {
-        fill: $color-neutral;
-    }  
+      color: $color-dark-theme;
+    }
+  }
+}
+.arrow-right-icon {
+  fill: $color-dark-theme;
+  height: 2rem;
+  width: 2rem;
+  vertical-align: middle;
+  margin-left: 0.8rem;
+  padding-bottom: 2px;
+
+  &:active,
+  &:focus {
+    fill: $color-primary-light;
+    box-shadow: 0 1rem 2rem rgba($color-dark-alt, 0.2);
+
+    //background-color: $color-primary-light;
+    //outline: none;
+
+    @include respond(phone) {
+      fill: $color-dark-theme;
+    }
+  }
+
+  @include respond(phone) {
+    fill: $color-neutral;
+  }
 }

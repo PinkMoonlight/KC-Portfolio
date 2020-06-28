@@ -1,110 +1,134 @@
 .footer {
-    display: block;
-    padding: 4rem 4rem 1rem 4rem;
-    background-image: linear-gradient(to right bottom, rgba(248, 255, 229, 0.6) , rgba(242, 116, 93, 0.95)), url(../img/footer-img.jpg);
-    // rgba(207,72,56,0.2) linear-gradient(to right bottom,  rgba(242, 116, 93  , 0.3), rgba(242, 116, 93, 0.4)),url(../img/footer-img.jpg);
-    background-color: rgb(242, 116, 93);
-    background-size: cover;
-    background-position: center;
-    color: $color-neutral;
-    grid-column: full-start / full-end;
+  display: block;
+  padding: 4rem 4rem 1rem 4rem;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(248, 255, 229, 0.6),
+      rgba(242, 116, 93, 0.95)
+    ),
+    url(../img/footer-img.jpg);
+  // rgba(207,72,56,0.2) linear-gradient(to right bottom,  rgba(242, 116, 93  , 0.3), rgba(242, 116, 93, 0.4)),url(../img/footer-img.jpg);
+  background-color: rgb(242, 116, 93);
+  background-size: cover;
+  background-position: center;
+  color: $color-neutral;
+  grid-column: full-start / full-end;
+  grid-row: 6 / 7;
+
+  height: 30rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  //flex-direction: column;
+  //justify-content: space-between;
+  //align-items: center;
+
+  &__heading {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    align-self: center;
+    justify-self: center;
+  }
+
+  &__social-media {
+    grid-column: 2 / 3;
+    grid-row: 1 / 21;
+    align-self: center;
+    justify-self: center;
+
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+
+    &--icon {
+      padding: 0 2rem;
+    }
+
+    &--link:link,
+    &--link:visited {
+      text-decoration: none;
+      cursor: pointer;
+    }
+    &--link:focus {
+      outline: {
+        color: $color-primary-light;
+      }
+    }
+  }
+
+  &__copyright {
+    grid-column: 2/ 3;
+    grid-row: 6 / 7;
+    font-size: 1.4rem;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .instagram-icon,
+  .github-icon,
+  .linkedin-icon,
+  .twitter-icon {
+    height: 5rem;
+    width: 5rem;
+    fill: $color-dark-theme;
+
+    @media only screen and (max-width: 20em) {
+      height: 4rem;
+      width: 4rem;
+    }
+  }
+  &__home-icon,
+  &__top-icon {
+    height: 4rem;
+    width: 4rem;
+    fill: $color-neutral;
+  }
+
+  &__home-box,
+  &__top-box {
+    grid-column: 20 / 21;
     grid-row: 6 / 7;
 
-    height: 30rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    //flex-direction: column;
-    //justify-content: space-between;
-    //align-items: center;
-
-    &__heading {
-        grid-column: 2 / 3;
-        grid-row: 1 / 2;
-        align-self: center;
-        justify-self: center;
-
+    @media only screen and (max-width: 20em) {
+      grid-column: 2 / 3;
     }
+  }
+  &__home-link:link,
+  &__top-link:link {
+    transform: translateY(2px);
+  }
 
-    &__social-media {
-        grid-column: 2 / 3;
-        grid-row: 1 / 21;
-        align-self: center;
-        justify-self: center;
+  &__name-link:link,
+  &__name-link:visited {
+    color: $color-neutral;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: all 0.2s;
+  }
 
-        list-style: none;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 2rem;
+  &__name-link:hover,
+  &__name-link:active {
+    color: $color-neutral;
+    padding: 0 3px;
+    background-color: rgba(242, 116, 93, 0.8);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+    transform: rotate(5deg) scale(1.3);
+  }
 
-        &--icon {
-            padding: 0 2rem;
-        }
-
-        &--link:link,
-        &--link:visited {
-            text-decoration: none;
-            cursor: pointer;
-        }
+  &__name-link:focus,
+  &__home-link:focus,
+  &__top-link:focus {
+    outline: {
+      color: $color-primary-light;
     }
+  }
+}
 
-    &__copyright {
-        grid-column: 2/ 3;
-        grid-row: 6 / 7;
-        font-size: 1.4rem;
-        align-self: center;
-        justify-self: center;
-    }
-
-    .instagram-icon,
-    .github-icon,
-    .linkedin-icon,
-    .twitter-icon {
-        height: 5rem;
-        width: 5rem;
-        fill: $color-dark-theme;
-
-        @media only screen and (max-width: 20em) {
-            height: 4rem;
-            width: 4rem;    
-        } 
-    }
-    &__home-icon,
-    &__top-icon {
-        height: 4rem;
-        width: 4rem;
-        fill: $color-neutral;
-    }
-
-    &__home-box,
-    &__top-box {
-       grid-column: 20 / 21;
-       grid-row: 6 / 7;
-
-       @media only screen and (max-width: 20em) {
-       grid-column: 2 / 3;
-        } 
-    }
-    &__home-link:link,
-    &__top-link:link {
-        transform: translateY(2px);
-    }
-
-    &__name-link:link,
-    &__name-link:visited {
-        color: $color-neutral;
-        text-decoration: none;
-        text-transform: uppercase;
-        display: inline-block;
-        transition: all .2s;
-    }
-
-    &__name-link:hover,
-    &__name-link:active {
-        color: $color-neutral;
-        padding: 0 3px;
-        background-color: rgba(242, 116, 93, 0.8);
-        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
-        transform: rotate(5deg) scale(1.3);
-    }
+.linkedin-icon:hover,
+.twitter-icon:hover,
+.github-icon:hover,
+.instagram-icon:hover {
+  fill: $color-neutral;
 }

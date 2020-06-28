@@ -1,49 +1,63 @@
-    *, 
-    *::before, 
-    *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: inherit;
-    }
-    html {
-      // This defines what 1 rem is:
-        font-size: 62.5%; // 10px/16px = 62.5% 1rem = 10px; 
-        
-        @include respond(tab-land) {  //width < 1200?
-          font-size: 56.25%;  // 1rem = 9px 9/16 = 56.25%
-        }
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  // This defines what 1 rem is:
+  font-size: 62.5%; // 10px/16px = 62.5% 1rem = 10px;
 
-        @include respond(tab-port) { // width < 900?
-          font-size: 50%;  // 1rem = 8px 8/16 = 50%
-        }
+  @include respond(tab-land) {
+    //width < 1200?
+    font-size: 56.25%; // 1rem = 9px 9/16 = 56.25%
+  }
 
-        @include respond(phone) { // width < 600?
-          font-size: 43.75%;  // 1rem = 7px 7/16 = 43.75%
-        }
+  @include respond(tab-port) {
+    // width < 900?
+    font-size: 50%; // 1rem = 8px 8/16 = 50%
+  }
 
-        @include respond(big-desktop) { // width > 1800 ?
-          font-size: 75%;  // 1 rem = 12px 12/16 = 75%
-        } 
-    }
-  
-    body {
-      font-family: $font-main;
-      line-height: 1.7;
-      color: #202C39;
-      box-sizing: border-box;
-      background-color: $color-dark-theme; 
-    }
+  @include respond(phone) {
+    // width < 600?
+    font-size: 43.75%; // 1rem = 7px 7/16 = 43.75%
+  }
 
-    .container {
-      display: grid;
-      grid-template-rows: 100vh repeat(3, min-content) 100vh min-content;
-      grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  @include respond(big-desktop) {
+    // width > 1800 ?
+    font-size: 75%; // 1 rem = 12px 12/16 = 75%
+  }
+}
 
-      @include respond(phone) {
-        grid-template-rows: 95vh repeat(3, min-content) 100vh min-content;
-      }
+body {
+  font-family: $font-main;
+  line-height: 1.7;
+  color: #202c39;
+  box-sizing: border-box;
+  background-color: $color-dark-theme;
+}
 
-      @media only screen and (max-width: 20em) {
-        grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
-      } 
-    }
+.container {
+  display: grid;
+  grid-template-rows: 100vh repeat(3, min-content) 100vh min-content;
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end] minmax(6rem, 1fr) [full-end];
+
+  @include respond(phone) {
+    grid-template-rows: 95vh repeat(3, min-content) 100vh min-content;
+  }
+
+  @media only screen and (max-width: 20em) {
+    grid-template-columns:
+      [full-start] minmax(3rem, 1fr) [center-start] repeat(
+        8,
+        [col-start] minmax(min-content, 14rem) [col-end]
+      )
+      [center-end] minmax(3rem, 1fr) [full-end];
+  }
+}

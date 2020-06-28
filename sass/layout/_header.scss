@@ -1,177 +1,181 @@
 .header {
-    display: block;
+  display: block;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(248, 255, 229, 0.3),
+      rgba(242, 116, 93, 0.9)
+    ),
+    url(../img/hero-small.jpg);
+  background-size: cover;
+  background-color: $color-primary-light;
+  color: $color-neutral;
+  grid-column: full-start / full-end;
+  grid-row: 1 / 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  @media (min-resolution: 192dpi) and (min-width: 600px) {
     background-image: linear-gradient(
-            to right bottom,
-            rgba(248, 255, 229, 0.3),
-            rgba(242, 116, 93, 0.9)),
-            url(../img/hero-small.jpg);
-    background-size: cover;
-    background-color: $color-primary-light; 
-    color: $color-neutral;
-    grid-column: full-start / full-end;
-    grid-row: 1 / 2;
+        to right bottom,
+        rgba(248, 255, 229, 0.3),
+        rgba(242, 116, 93, 0.9)
+      ),
+      url(../img/hero-large.jpeg);
+  }
+
+  @include respond(tab-land) {
+    padding-bottom: 3rem;
+  }
+
+  @include respond(phone) {
+    background-position: center;
+  }
+  @include respond(sm-phone) {
+    background-position: left;
+  }
+
+  &__navigation {
+    width: 100%;
+    font-size: 3rem;
+    padding: 2rem 5rem 2rem 2rem;
+    align-self: flex-start;
 
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
     justify-content: space-between;
 
-    @media (min-resolution: 192dpi) and (min-width: 600px) {
-        background-image: linear-gradient(
-            to right bottom,
-            rgba(248, 255, 229, 0.3),
-            rgba(242, 116, 93, 0.9)),
-            url(../img/hero-large.jpeg);
-    }
+    &--list {
+      order: 2;
+      list-style-type: none;
+      display: flex;
 
-    @include respond(tab-land) {
-        padding-bottom: 3rem;
-    }
-    
-    @include respond(phone) {
-        background-position: center; 
-    }
-    @include respond(sm-phone) { 
-        background-position: left; 
-    }
-    
-    &__navigation {
-        width: 100%;
-        font-size: 3rem;
-        padding: 2rem 5rem 2rem 2rem;
-        align-self: flex-start;
-
-        display: flex;
-        justify-content: space-between;
-
-        &--list {
-            order: 2;
-            list-style-type: none;
-            display: flex;    
-
-            @include respond(phone) {
-                visibility: hidden;
-                display: none; 
-            }
-        }
-
-        &--item {
-            font-family: $font-headings;
-
-            &:not(:first-child) {
-                padding-left: 3rem;
-            }
-        }   
-
-        &--link:link,
-        &--link:visited {
-            text-decoration: none;
-            color: inherit;
-
-        }
-
-        &--link:hover,
-        &--link:focus {
-            color: $color-primary-light;
-            outline: none;
-        }
-    }
-
-    &__social-media {
-        
-        &--list {
-            order: 1;
-            margin-left: 2rem;
-            //justify-self: flex-end;
-            list-style: none;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-gap: 2rem;
-
-            @include respond(phone) {
-                order: 2;
-                position: absolute;
-                margin-left: 0;
-                top: 2.5rem;
-                right: 2.5rem;
-            }
-
+      @include respond(phone) {
+        visibility: hidden;
+        display: none;
       }
-
-        &--link:link,
-        &--link:visited {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        &--link:hover,
-        &--link:focus {
-            color: $color-primary-light;
-            outline: none;
-        } 
     }
 
-    &__instagram-icon,
-    &__github-icon,
-    &__linkedin-icon,
-    &__twitter-icon {
-        height: 2rem;
-        width: 2rem;
-        fill: $color-neutral;
+    &--item {
+      font-family: $font-headings;
 
-        @media only screen and (max-width: 20em) {
-            height: 2rem;
-            width: 2rem;    
-        } 
+      &:not(:first-child) {
+        padding-left: 3rem;
+      }
     }
 
-    &__text-box {
-        margin: 5rem;
-        //margin-bottom: 4rem;
-        justify-self: flex-end;
-
-        @include respond(sm-phone) {
-            margin: 3rem;
-        }
+    &--link:link,
+    &--link:visited {
+      text-decoration: none;
+      color: inherit;
     }
+
+    &--link:hover,
+    &--link:focus {
+      color: $color-primary-light;
+      outline: none;
+    }
+  }
+
+  &__social-media {
+    &--link:focus {
+      outline: {
+        color: $color-primary-light;
+      }
+    }
+    &--list {
+      order: 1;
+      margin-left: 2rem;
+      //justify-self: flex-end;
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 2rem;
+
+      @include respond(phone) {
+        order: 2;
+        position: absolute;
+        margin-left: 0;
+        top: 2.5rem;
+        right: 2.5rem;
+      }
+    }
+
+    &--link:link,
+    &--link:visited {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  &__instagram-icon,
+  &__github-icon,
+  &__linkedin-icon,
+  &__twitter-icon {
+    height: 2rem;
+    width: 2rem;
+    fill: $color-neutral;
+
+    @media only screen and (max-width: 20em) {
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+
+  &__text-box {
+    margin: 5rem;
+    //margin-bottom: 4rem;
+    justify-self: flex-end;
+
+    @include respond(sm-phone) {
+      margin: 3rem;
+    }
+  }
 }
 
 .heading-primary--main,
 .heading-primary--sub {
-    text-align: right;
+  text-align: right;
 }
 
 .heading-primary--main {
-    animation-delay: 0.5s;
-    animation: 1.2s slideUp linear forwards;
-    animation-timing-function: ease-out;
-    transform: translateY(8rem);
+  animation-delay: 0.5s;
+  animation: 1.2s slideUp linear forwards;
+  animation-timing-function: ease-out;
+  transform: translateY(8rem);
 }
 
 .heading-primary--sub {
-    animation-delay: 0.5s;
-    animation: 2s slideUp linear forwards;
-    animation-timing-function: ease-out;
-    transform: translateY(10rem);
-    }
-
+  animation-delay: 0.5s;
+  animation: 2s slideUp linear forwards;
+  animation-timing-function: ease-out;
+  transform: translateY(10rem);
+}
 
 @keyframes slideUp {
-    0% {
-        opacity: 0;
-        transform: translateY(40rem);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(40rem);
+  }
 
-    40% {
-        opacity: 0;
-    }
+  40% {
+    opacity: 0;
+  }
 
-    80% {
-        transform: translateY(.8rem)
-    }
+  80% {
+    transform: translateY(0.8rem);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header__linkedin-icon:hover,
+.header__twitter-icon:hover,
+.header__github-icon:hover,
+.header__instagram-icon:hover {
+  fill: $color-primary-light;
 }

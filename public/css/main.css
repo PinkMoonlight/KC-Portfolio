@@ -43,7 +43,7 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   line-height: 1.7;
-  color: #202C39;
+  color: #202c39;
   box-sizing: border-box;
   background-color: #1f202b; }
 
@@ -119,7 +119,7 @@ body {
   font-size: 1.6rem;
   padding: 1.1rem 2rem;
   border: none;
-  transition: all .2s;
+  transition: all 0.2s;
   cursor: pointer;
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
@@ -133,8 +133,7 @@ body {
   background-color: transparent; }
 
 .btn:active, .btn:focus {
-  color: #f2745d;
-  outline: none; }
+  outline-color: #f2745d; }
   @media (max-width: 37.5em) {
     .btn:active, .btn:focus {
       color: #1f202b; } }
@@ -255,6 +254,8 @@ body {
     .footer__social-media--link:link, .footer__social-media--link:visited {
       text-decoration: none;
       cursor: pointer; }
+    .footer__social-media--link:focus {
+      outline-color: #f2745d; }
   .footer__copyright {
     grid-column: 2/ 3;
     grid-row: 6 / 7;
@@ -292,13 +293,21 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     display: inline-block;
-    transition: all .2s; }
+    transition: all 0.2s; }
   .footer__name-link:hover, .footer__name-link:active {
     color: #f8ffe5;
     padding: 0 3px;
     background-color: rgba(242, 116, 93, 0.8);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
     transform: rotate(5deg) scale(1.3); }
+  .footer__name-link:focus, .footer__home-link:focus, .footer__top-link:focus {
+    outline-color: #f2745d; }
+
+.linkedin-icon:hover,
+.twitter-icon:hover,
+.github-icon:hover,
+.instagram-icon:hover {
+  fill: #f8ffe5; }
 
 .header {
   display: block;
@@ -349,6 +358,8 @@ body {
     .header__navigation--link:hover, .header__navigation--link:focus {
       color: #f2745d;
       outline: none; }
+  .header__social-media--link:focus {
+    outline-color: #f2745d; }
   .header__social-media--list {
     order: 1;
     margin-left: 2rem;
@@ -366,9 +377,6 @@ body {
   .header__social-media--link:link, .header__social-media--link:visited {
     text-decoration: none;
     color: inherit; }
-  .header__social-media--link:hover, .header__social-media--link:focus {
-    color: #f2745d;
-    outline: none; }
   .header__instagram-icon, .header__github-icon, .header__linkedin-icon, .header__twitter-icon {
     height: 2rem;
     width: 2rem;
@@ -411,6 +419,12 @@ body {
   100% {
     opacity: 1;
     transform: translateY(0); } }
+
+.header__linkedin-icon:hover,
+.header__twitter-icon:hover,
+.header__github-icon:hover,
+.header__instagram-icon:hover {
+  fill: #f2745d; }
 
 /*
 .container__about {
@@ -738,6 +752,8 @@ body {
           font-size: 1.7rem; } }
     .contact__content--email:hover {
       color: #f15946; }
+    .contact__content--email:focus {
+      outline-color: #f2745d; }
     @media (max-width: 56.25em) {
       .contact__content {
         grid-column: 4 / 10; } }
@@ -780,6 +796,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center; }
+    .portfolio__box a {
+      outline-color: #f2745d; }
   .portfolio__img {
     position: relative;
     background-size: cover;
